@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD4AA8741400077A006141A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AA8731400077A006141A1 /* UIKit.framework */; };
+		DD4AA8761400077A006141A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AA8751400077A006141A1 /* Foundation.framework */; };
+		DD4AA8781400077A006141A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AA8771400077A006141A1 /* CoreGraphics.framework */; };
+		DD4AA87E1400077A006141A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA87C1400077A006141A1 /* InfoPlist.strings */; };
+		DD4AA8801400077A006141A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA87F1400077A006141A1 /* main.m */; };
+		DD4AA8841400077A006141A1 /* avtofonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */; };
+		DD4AA8871400077B006141A1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA8851400077B006141A1 /* MainWindow.xib */; };
+		DD4AA88A1400077B006141A1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA8891400077B006141A1 /* FirstViewController.m */; };
+		DD4AA88D1400077B006141A1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA88C1400077B006141A1 /* SecondViewController.m */; };
+		DD4AA8901400077B006141A1 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA88E1400077B006141A1 /* FirstView.xib */; };
+		DD4AA8931400077B006141A1 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA8911400077B006141A1 /* SecondView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD4AA86F1400077A006141A1 /* avtofon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = avtofon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4AA8731400077A006141A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD4AA8751400077A006141A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD4AA8771400077A006141A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD4AA87B1400077A006141A1 /* avtofon-Info.plist */ = {isa = PBXFileReference; path = "avtofon-Info.plist"; sourceTree = "<group>"; };
+		DD4AA87D1400077A006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD4AA87F1400077A006141A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD4AA8811400077A006141A1 /* avtofon-Prefix.pch */ = {isa = PBXFileReference; path = "avtofon-Prefix.pch"; sourceTree = "<group>"; };
+		DD4AA8821400077A006141A1 /* avtofonAppDelegate.h */ = {isa = PBXFileReference; path = avtofonAppDelegate.h; sourceTree = "<group>"; };
+		DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avtofonAppDelegate.m; sourceTree = "<group>"; };
+		DD4AA8861400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		DD4AA8881400077B006141A1 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		DD4AA8891400077B006141A1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		DD4AA88B1400077B006141A1 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		DD4AA88C1400077B006141A1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		DD4AA88F1400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		DD4AA8921400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD4AA86C1400077A006141A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4AA8741400077A006141A1 /* UIKit.framework in Frameworks */,
+				DD4AA8761400077A006141A1 /* Foundation.framework in Frameworks */,
+				DD4AA8781400077A006141A1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD4AA8641400077A006141A1 = {
+			isa = PBXGroup;
+			children = (
+				DD4AA8791400077A006141A1 /* avtofon */,
+				DD4AA8721400077A006141A1 /* Frameworks */,
+				DD4AA8701400077A006141A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD4AA8701400077A006141A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AA86F1400077A006141A1 /* avtofon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD4AA8721400077A006141A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AA8731400077A006141A1 /* UIKit.framework */,
+				DD4AA8751400077A006141A1 /* Foundation.framework */,
+				DD4AA8771400077A006141A1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD4AA8791400077A006141A1 /* avtofon */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AA8821400077A006141A1 /* avtofonAppDelegate.h */,
+				DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */,
+				DD4AA8851400077B006141A1 /* MainWindow.xib */,
+				DD4AA8881400077B006141A1 /* FirstViewController.h */,
+				DD4AA8891400077B006141A1 /* FirstViewController.m */,
+				DD4AA88B1400077B006141A1 /* SecondViewController.h */,
+				DD4AA88C1400077B006141A1 /* SecondViewController.m */,
+				DD4AA88E1400077B006141A1 /* FirstView.xib */,
+				DD4AA8911400077B006141A1 /* SecondView.xib */,
+				DD4AA87A1400077A006141A1 /* Supporting Files */,
+			);
+			path = avtofon;
+			sourceTree = "<group>";
+		};
+		DD4AA87A1400077A006141A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AA87B1400077A006141A1 /* avtofon-Info.plist */,
+				DD4AA87C1400077A006141A1 /* InfoPlist.strings */,
+				DD4AA87F1400077A006141A1 /* main.m */,
+				DD4AA8811400077A006141A1 /* avtofon-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD4AA86E1400077A006141A1 /* avtofon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4AA8961400077B006141A1 /* Build configuration list for PBXNativeTarget "avtofon" */;
+			buildPhases = (
+				DD4AA86B1400077A006141A1 /* Sources */,
+				DD4AA86C1400077A006141A1 /* Frameworks */,
+				DD4AA86D1400077A006141A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = avtofon;
+			productName = avtofon;
+			productReference = DD4AA86F1400077A006141A1 /* avtofon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD4AA8661400077A006141A1 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = DD4AA8691400077A006141A1 /* Build configuration list for PBXProject "avtofon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD4AA8641400077A006141A1;
+			productRefGroup = DD4AA8701400077A006141A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD4AA86E1400077A006141A1 /* avtofon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD4AA86D1400077A006141A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4AA87E1400077A006141A1 /* InfoPlist.strings in Resources */,
+				DD4AA8871400077B006141A1 /* MainWindow.xib in Resources */,
+				DD4AA8901400077B006141A1 /* FirstView.xib in Resources */,
+				DD4AA8931400077B006141A1 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD4AA86B1400077A006141A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4AA8801400077A006141A1 /* main.m in Sources */,
+				DD4AA8841400077A006141A1 /* avtofonAppDelegate.m in Sources */,
+				DD4AA88A1400077B006141A1 /* FirstViewController.m in Sources */,
+				DD4AA88D1400077B006141A1 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD4AA87C1400077A006141A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4AA87D1400077A006141A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD4AA8851400077B006141A1 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4AA8861400077B006141A1 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		DD4AA88E1400077B006141A1 /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4AA88F1400077B006141A1 /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		DD4AA8911400077B006141A1 /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4AA8921400077B006141A1 /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD4AA8941400077B006141A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD4AA8951400077B006141A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD4AA8971400077B006141A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avtofon/avtofon-Prefix.pch";
+				INFOPLIST_FILE = "avtofon/avtofon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD4AA8981400077B006141A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avtofon/avtofon-Prefix.pch";
+				INFOPLIST_FILE = "avtofon/avtofon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD4AA8691400077A006141A1 /* Build configuration list for PBXProject "avtofon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4AA8941400077B006141A1 /* Debug */,
+				DD4AA8951400077B006141A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD4AA8961400077B006141A1 /* Build configuration list for PBXNativeTarget "avtofon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4AA8971400077B006141A1 /* Debug */,
+				DD4AA8981400077B006141A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD4AA8661400077A006141A1 /* Project object */;
+}
