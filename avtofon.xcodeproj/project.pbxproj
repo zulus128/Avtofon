@@ -261,10 +261,12 @@
 		DD4AA8971400077B006141A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "avtofon/avtofon-Prefix.pch";
 				INFOPLIST_FILE = "avtofon/avtofon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3933C1CF-5FD2-4E50-974C-5B6241100988";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -272,10 +274,12 @@
 		DD4AA8981400077B006141A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "avtofon/avtofon-Prefix.pch";
 				INFOPLIST_FILE = "avtofon/avtofon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3933C1CF-5FD2-4E50-974C-5B6241100988";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -299,6 +303,7 @@
 				DD4AA8981400077B006141A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
