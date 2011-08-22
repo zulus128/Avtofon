@@ -10,6 +10,8 @@
 
 @implementation MarkWsDealers
 
+@synthesize title, image, dealers;
+
 - (id)init
 {
     self = [super init];

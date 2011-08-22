@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MarkWsDealers : NSObject
+@interface MarkWsDealers : NSObject {
+    
+}
+
+@property (nonatomic, retain) NSString* title;
+@property (nonatomic, retain) NSString* image;
+@property (nonatomic, retain) NSMutableArray* dealers;
 
 @end
