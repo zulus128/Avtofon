@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD2263271401CC7300CA6E6C /* DealerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2263251401CC7300CA6E6C /* DealerTable.m */; };
+		DD2263281401CC7300CA6E6C /* DealerTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2263261401CC7300CA6E6C /* DealerTable.xib */; };
+		DD22632E1401CD7200CA6E6C /* PriceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DD22632C1401CD7200CA6E6C /* PriceTable.m */; };
+		DD22632F1401CD7200CA6E6C /* PriceTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD22632D1401CD7200CA6E6C /* PriceTable.xib */; };
+		DD2263321401CE4F00CA6E6C /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2263311401CE4F00CA6E6C /* XMLParser.m */; };
+		DD2263351401CE7000CA6E6C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2263341401CE7000CA6E6C /* Item.m */; };
+		DD2263381401D40100CA6E6C /* dealers.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD2263371401D40100CA6E6C /* dealers.plist */; };
+		DD22633A1401D40D00CA6E6C /* prices.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD2263391401D40D00CA6E6C /* prices.plist */; };
+		DD22633D1401D43700CA6E6C /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD22633C1401D43700CA6E6C /* Common.m */; };
+		DD2263401401D93F00CA6E6C /* MarkWsDealers.m in Sources */ = {isa = PBXBuildFile; fileRef = DD22633F1401D93F00CA6E6C /* MarkWsDealers.m */; };
 		DD4AA8741400077A006141A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AA8731400077A006141A1 /* UIKit.framework */; };
 		DD4AA8761400077A006141A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AA8751400077A006141A1 /* Foundation.framework */; };
 		DD4AA8781400077A006141A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AA8771400077A006141A1 /* CoreGraphics.framework */; };
@@ -14,13 +24,25 @@
 		DD4AA8801400077A006141A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA87F1400077A006141A1 /* main.m */; };
 		DD4AA8841400077A006141A1 /* avtofonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */; };
 		DD4AA8871400077B006141A1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA8851400077B006141A1 /* MainWindow.xib */; };
-		DD4AA88A1400077B006141A1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA8891400077B006141A1 /* FirstViewController.m */; };
-		DD4AA88D1400077B006141A1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA88C1400077B006141A1 /* SecondViewController.m */; };
-		DD4AA8901400077B006141A1 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA88E1400077B006141A1 /* FirstView.xib */; };
-		DD4AA8931400077B006141A1 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA8911400077B006141A1 /* SecondView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD2263241401CC7300CA6E6C /* DealerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealerTable.h; sourceTree = "<group>"; };
+		DD2263251401CC7300CA6E6C /* DealerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealerTable.m; sourceTree = "<group>"; };
+		DD2263261401CC7300CA6E6C /* DealerTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DealerTable.xib; sourceTree = "<group>"; };
+		DD22632B1401CD7200CA6E6C /* PriceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceTable.h; sourceTree = "<group>"; };
+		DD22632C1401CD7200CA6E6C /* PriceTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceTable.m; sourceTree = "<group>"; };
+		DD22632D1401CD7200CA6E6C /* PriceTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceTable.xib; sourceTree = "<group>"; };
+		DD2263301401CE4F00CA6E6C /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		DD2263311401CE4F00CA6E6C /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		DD2263331401CE7000CA6E6C /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		DD2263341401CE7000CA6E6C /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		DD2263371401D40100CA6E6C /* dealers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dealers.plist; sourceTree = "<group>"; };
+		DD2263391401D40D00CA6E6C /* prices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prices.plist; sourceTree = "<group>"; };
+		DD22633B1401D43600CA6E6C /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		DD22633C1401D43700CA6E6C /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		DD22633E1401D93E00CA6E6C /* MarkWsDealers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkWsDealers.h; sourceTree = "<group>"; };
+		DD22633F1401D93F00CA6E6C /* MarkWsDealers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkWsDealers.m; sourceTree = "<group>"; };
 		DD4AA86F1400077A006141A1 /* avtofon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = avtofon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4AA8731400077A006141A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD4AA8751400077A006141A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,12 +54,6 @@
 		DD4AA8821400077A006141A1 /* avtofonAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avtofonAppDelegate.h; sourceTree = "<group>"; };
 		DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avtofonAppDelegate.m; sourceTree = "<group>"; };
 		DD4AA8861400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		DD4AA8881400077B006141A1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		DD4AA8891400077B006141A1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		DD4AA88B1400077B006141A1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		DD4AA88C1400077B006141A1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		DD4AA88F1400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		DD4AA8921400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD22632A1401CD3800CA6E6C /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				DD2263261401CC7300CA6E6C /* DealerTable.xib */,
+				DD22632D1401CD7200CA6E6C /* PriceTable.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		DD2263361401D3D300CA6E6C /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				DD2263371401D40100CA6E6C /* dealers.plist */,
+				DD2263391401D40D00CA6E6C /* prices.plist */,
+			);
+			name = Plists;
+			sourceTree = "<group>";
+		};
 		DD4AA8641400077A006141A1 = {
 			isa = PBXGroup;
 			children = (
@@ -84,15 +118,23 @@
 		DD4AA8791400077A006141A1 /* avtofon */ = {
 			isa = PBXGroup;
 			children = (
+				DD2263361401D3D300CA6E6C /* Plists */,
+				DD22632A1401CD3800CA6E6C /* Xibs */,
 				DD4AA8821400077A006141A1 /* avtofonAppDelegate.h */,
 				DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */,
+				DD22633B1401D43600CA6E6C /* Common.h */,
+				DD22633C1401D43700CA6E6C /* Common.m */,
 				DD4AA8851400077B006141A1 /* MainWindow.xib */,
-				DD4AA8881400077B006141A1 /* FirstViewController.h */,
-				DD4AA8891400077B006141A1 /* FirstViewController.m */,
-				DD4AA88B1400077B006141A1 /* SecondViewController.h */,
-				DD4AA88C1400077B006141A1 /* SecondViewController.m */,
-				DD4AA88E1400077B006141A1 /* FirstView.xib */,
-				DD4AA8911400077B006141A1 /* SecondView.xib */,
+				DD2263241401CC7300CA6E6C /* DealerTable.h */,
+				DD2263251401CC7300CA6E6C /* DealerTable.m */,
+				DD22632B1401CD7200CA6E6C /* PriceTable.h */,
+				DD22632C1401CD7200CA6E6C /* PriceTable.m */,
+				DD2263301401CE4F00CA6E6C /* XMLParser.h */,
+				DD2263311401CE4F00CA6E6C /* XMLParser.m */,
+				DD2263331401CE7000CA6E6C /* Item.h */,
+				DD2263341401CE7000CA6E6C /* Item.m */,
+				DD22633E1401D93E00CA6E6C /* MarkWsDealers.h */,
+				DD22633F1401D93F00CA6E6C /* MarkWsDealers.m */,
 				DD4AA87A1400077A006141A1 /* Supporting Files */,
 			);
 			path = avtofon;
@@ -158,8 +200,10 @@
 			files = (
 				DD4AA87E1400077A006141A1 /* InfoPlist.strings in Resources */,
 				DD4AA8871400077B006141A1 /* MainWindow.xib in Resources */,
-				DD4AA8901400077B006141A1 /* FirstView.xib in Resources */,
-				DD4AA8931400077B006141A1 /* SecondView.xib in Resources */,
+				DD2263281401CC7300CA6E6C /* DealerTable.xib in Resources */,
+				DD22632F1401CD7200CA6E6C /* PriceTable.xib in Resources */,
+				DD2263381401D40100CA6E6C /* dealers.plist in Resources */,
+				DD22633A1401D40D00CA6E6C /* prices.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +216,12 @@
 			files = (
 				DD4AA8801400077A006141A1 /* main.m in Sources */,
 				DD4AA8841400077A006141A1 /* avtofonAppDelegate.m in Sources */,
-				DD4AA88A1400077B006141A1 /* FirstViewController.m in Sources */,
-				DD4AA88D1400077B006141A1 /* SecondViewController.m in Sources */,
+				DD2263271401CC7300CA6E6C /* DealerTable.m in Sources */,
+				DD22632E1401CD7200CA6E6C /* PriceTable.m in Sources */,
+				DD2263321401CE4F00CA6E6C /* XMLParser.m in Sources */,
+				DD2263351401CE7000CA6E6C /* Item.m in Sources */,
+				DD22633D1401D43700CA6E6C /* Common.m in Sources */,
+				DD2263401401D93F00CA6E6C /* MarkWsDealers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,22 +242,6 @@
 				DD4AA8861400077B006141A1 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		DD4AA88E1400077B006141A1 /* FirstView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD4AA88F1400077B006141A1 /* en */,
-			);
-			name = FirstView.xib;
-			sourceTree = "<group>";
-		};
-		DD4AA8911400077B006141A1 /* SecondView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD4AA8921400077B006141A1 /* en */,
-			);
-			name = SecondView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
