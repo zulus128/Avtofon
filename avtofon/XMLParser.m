@@ -109,7 +109,20 @@ enum type {
             [dealer release];
         }	        
         else
-            if([elementName isEqualToString:TITLE_TAG]) {
+            if([elementName isEqualToString:COMPLECT_TAG]) {
+                
+                [model.complectations addObject:complectation];
+                [complectation release];
+            }	        
+            else
+                if([elementName isEqualToString:MODEL_TAG]) {
+                    
+                    [item.models addObject:model];
+                    [model release];
+                }	        
+                else
+
+                if([elementName isEqualToString:TITLE_TAG]) {
             
                 switch(currtype) {
                         
@@ -128,20 +141,69 @@ enum type {
                 }
             }
             else
-                if([elementName isEqualToString:IMAGE_TAG]) 
-                    item.image = trimedStr;
+                if([elementName isEqualToString:IMAGE_TAG]) {
+
+                    switch(currtype) {
+                            
+                        case EN_MARK:
+                            item.image = trimedStr;
+                            break;
+                        case EN_MODEL:
+                            model.image = trimedStr;
+                            break;
+                    }
+                }
                     else
                         if([elementName isEqualToString:ADDRESS_TAG]) 
                             dealer.address = trimedStr;
                             else
-                                if([elementName isEqualToString:CODE_TAG]) 
-                                    dealer.code = trimedStr;
+                                if([elementName isEqualToString:CODE_TAG]) {
+                                    
+                                    switch(currtype) {
+                                            
+                                        case EN_DEALER:
+                                            dealer.code = trimedStr;
+                                            break;
+                                        case EN_COMLECTATION:
+                                            complectation.code = trimedStr;
+                                            break;
+                                    }
+
+                                }
+                                    
                                 else
                                     if([elementName isEqualToString:PROMOTION_TAG]) 
                                         dealer.promotion = trimedStr;
                                     else
                                         if([elementName isEqualToString:RECOMMEND_TAG]) 
                                             dealer.recommend = [trimedStr boolValue];
+                                        else
+                                            if([elementName isEqualToString:RECOMMEND_TAG]) 
+                                                dealer.recommend = [trimedStr boolValue];
+                                            else
+                                                if([elementName isEqualToString:YEAR_TAG]) 
+                                                    complectation.year = trimedStr;
+                                                else
+                                                    if([elementName isEqualToString:VOLUME_TAG]) 
+                                                        complectation.volume = trimedStr;
+                                                    else
+                                                        if([elementName isEqualToString:POWER_TAG]) 
+                                                            complectation.power = trimedStr;
+                                                        else
+                                                            if([elementName isEqualToString:FUEL_TAG]) 
+                                                                complectation.fuel = trimedStr;
+                                                            else
+                                                                if([elementName isEqualToString:TRANSMISSION_TAG]) 
+                                                                    complectation.transmission = trimedStr;
+                                                                else
+                                                                    if([elementName isEqualToString:GEARBOX_TAG]) 
+                                                                        complectation.gearbox = trimedStr;
+                                                                    else
+                                                                        if([elementName isEqualToString:PRICE_TAG]) 
+                                                                            complectation.price = trimedStr;
+                                                                        else
+                                                                            if([elementName isEqualToString:PRICESPEC_TAG]) 
+                                                                                complectation.pricespec = trimedStr;
                                         
                             
 	[currentElementValue release];
