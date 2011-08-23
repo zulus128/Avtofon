@@ -50,8 +50,8 @@
 	self = [super init];
 	if(self !=nil) {
 
-       // dealers = [[NSMutableArray alloc] init];
-       // prices = [[NSMutableArray alloc] init];
+        dealers = [[NSMutableArray alloc] init];
+        prices = [[NSMutableArray alloc] init];
         
  		NSArray* sp = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 		NSString* docpath = [sp objectAtIndex: 0];
@@ -67,7 +67,7 @@
 			
 		}
     
-        dealers = [[NSMutableDictionary alloc] initWithContentsOfFile:self.dealerFilePath];
+        dealer_file = [[NSMutableDictionary alloc] initWithContentsOfFile:self.dealerFilePath];
 
         self.priceFilePath = [docpath stringByAppendingPathComponent:@"prices.plist"];
 		
@@ -82,7 +82,7 @@
 			
 		}
         
-        prices = [[NSMutableDictionary alloc] initWithContentsOfFile:self.priceFilePath];
+        price_file = [[NSMutableDictionary alloc] initWithContentsOfFile:self.priceFilePath];
 
 	}
 	return self;	

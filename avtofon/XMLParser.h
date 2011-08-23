@@ -14,6 +14,7 @@
 
 	NSMutableString* currentElementValue;
     int itype;
+    BOOL isDealer;
 }
 
 - (XMLParser *) initXMLParser: (int) type;

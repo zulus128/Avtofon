@@ -32,6 +32,7 @@
 
 		item = [[Mark alloc] init];
         //item.type = itype;
+        isDealer = NO;
         
         NSLog(@"Item alloc type = %i", itype);
 	}
@@ -39,6 +40,7 @@
     if([elementName isEqualToString:DEALER_TAG]) {
         
 		dealer = [[Dealer alloc] init];
+        isDealer = YES;
 	}	
 
 //   if ([elementName isEqualToString:IMAGE_TAG])
@@ -78,27 +80,36 @@
         [item release];
     }
     else
-        
         if([elementName isEqualToString:DEALER_TAG]) {
             
             [item.dealers addObject:dealer];
             [dealer release];
-            dealer = nil;
+            isDealer = NO;
         }	        
         else
+            if([elementName isEqualToString:TITLE_TAG]) {
             
-        if([elementName isEqualToString:TITLE_TAG]) {
-            
-            if(dealer)
-                dealer.title = trimedStr;
-            else
-                item.title = trimedStr;
-        }
+                if(isDealer)
+                    dealer.title = trimedStr;
+                else
+                    item.title = trimedStr;
+            }
             else
                 if([elementName isEqualToString:IMAGE_TAG]) 
                     item.image = trimedStr;
                     else
-                        //if([elementName isEqualToString:IMAGE_TAG]) 
+                        if([elementName isEqualToString:ADDRESS_TAG]) 
+                            dealer.address = trimedStr;
+                            else
+                                if([elementName isEqualToString:CODE_TAG]) 
+                                    dealer.code = trimedStr;
+                                else
+                                    if([elementName isEqualToString:PROMOTION_TAG]) 
+                                        dealer.promotion = trimedStr;
+                                    else
+                                        if([elementName isEqualToString:RECOMMEND_TAG]) 
+                                            dealer.recommend = [trimedStr boolValue];
+                                        
                             
 	[currentElementValue release];
 	currentElementValue = nil;
@@ -107,7 +118,7 @@
 
 - (void) dealloc {
 
-	[item release];
+	//[item release];
 	
 	[currentElementValue release];
 	[super dealloc];

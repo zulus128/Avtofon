@@ -11,6 +11,11 @@
 #define TITLE_TAG @"title"
 #define IMAGE_TAG @"img"
 #define DEALER_TAG @"dealer"
+#define ADDRESS_TAG @"adress"
+#define CODE_TAG @"cod"
+#define PROMOTION_TAG @"promotion"
+#define RECOMMEND_TAG @"recommend"
+
 
 #define MENU_URL_FOR_REACH @"www.avtofon.com"
 #define XMLDEALERS_URL @"http://avtofon.com/sheet/xmldealer"
@@ -29,6 +34,9 @@ enum item_types {
  
     NSMutableArray* dealers;
     NSMutableArray* prices;
+    
+    NSMutableDictionary* dealer_file;
+    NSMutableDictionary* price_file;
 }
 
 @property (nonatomic, retain) NSString* dealerFilePath;

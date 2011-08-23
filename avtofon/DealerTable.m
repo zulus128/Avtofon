@@ -10,6 +10,8 @@
 #import "Common.h"
 #import "Reachability.h"
 #import "XMLParser.h"
+#import "Mark.h"
+#import "MarkDealers.h"
 
 @implementation DealerTable
 
@@ -82,16 +84,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[Common instance] getMarkWsDealersCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,7 +104,10 @@
     }
     
     // Configure the cell...
-    
+    Mark* mark = [[Common instance]getMarkWsDealerAt:indexPath.row];
+    cell.textLabel.text = mark.title;
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: mark.image]]];
+
     return cell;
 }
 
@@ -149,16 +152,17 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    MarkDealers *detailViewController = [[MarkDealers alloc] initWithNibName:@"MarkDealers" bundle:nil];
+     
+    Mark* mrk = [[Common instance]getMarkWsDealerAt:indexPath.row];
+    detailViewController.mark = mrk;
+    
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+     
 }
 
 
