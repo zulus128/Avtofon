@@ -5,10 +5,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Item.h"
+#import "Mark.h"
 
+#define ITEM_TAG @"mark"
 #define TITLE_TAG @"title"
 #define IMAGE_TAG @"img"
+#define DEALER_TAG @"dealer"
+
+#define MENU_URL_FOR_REACH @"www.avtofon.com"
+#define XMLDEALERS_URL @"http://avtofon.com/sheet/xmldealer"
 
 enum item_types {
     
@@ -32,13 +37,14 @@ enum item_types {
 
 + (Common*)instance;
 
-- (void)clearDealers;
-- (void)addDealer: (Item*)item;
-- (int) getDealersCount;
-- (Item*) getDealerAt: (int)num;
+- (void)clearMarkWsDealers;
+- (void)addMarkWsDealer: (Mark*)item;
+- (int) getMarkWsDealersCount;
+- (Mark*) getMarkWsDealerAt: (int)num;
 
 - (BOOL) isOnlyWiFi;
 - (void) setOnlyWiFi: (BOOL)b;
 
+- (void) saveDealersPreload;
 
 @end

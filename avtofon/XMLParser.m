@@ -11,7 +11,7 @@
 
 @implementation XMLParser
 
-@synthesize item;
+@synthesize item, dealer;
 
 - (XMLParser *) initXMLParser: (int) type {
 	
@@ -30,14 +30,19 @@
     
 	if([elementName isEqualToString:ITEM_TAG]) {
 
-		item = [[Item alloc] init];
-        item.type = itype;
+		item = [[Mark alloc] init];
+        //item.type = itype;
         
         NSLog(@"Item alloc type = %i", itype);
 	}
 	
-    if ([elementName isEqualToString:IMAGE_TAG])
-        item.image = [attributeDict objectForKey:@"url"];
+    if([elementName isEqualToString:DEALER_TAG]) {
+        
+		dealer = [[Dealer alloc] init];
+	}	
+
+//   if ([elementName isEqualToString:IMAGE_TAG])
+ //       item.image = [attributeDict objectForKey:@"url"];
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
@@ -61,43 +66,40 @@
     if([elementName isEqualToString:ITEM_TAG]) {
 			
         switch (itype) {
-            case TYPE_NEWS:
-                [[Common instance] addNews:item];                
+            case TYPE_DEALER:
+                [[Common instance] addMarkWsDealer:item];                
                 break;
-            case TYPE_QAS:
-                [[Common instance] addQA:item];                
+            case TYPE_COMPLECTATION:
+                //[[Common instance] addQA:item];                
                 break;
-            case TYPE_PCS:
-                [[Common instance] addPodcast:item];                
-                break;
-                
             default:
                 break;
         }
         [item release];
     }
     else
-        if([elementName isEqualToString:TITLE_TAG])
-            item.title = trimedStr;
+        
+        if([elementName isEqualToString:DEALER_TAG]) {
+            
+            [item.dealers addObject:dealer];
+            [dealer release];
+            dealer = nil;
+        }	        
+        else
+            
+        if([elementName isEqualToString:TITLE_TAG]) {
+            
+            if(dealer)
+                dealer.title = trimedStr;
             else
-                if([elementName isEqualToString:LINK_TAG]) 
-                    item.link = trimedStr;
+                item.title = trimedStr;
+        }
+            else
+                if([elementName isEqualToString:IMAGE_TAG]) 
+                    item.image = trimedStr;
                     else
-						if([elementName isEqualToString:RUBRIC_TAG])
-							item.rubric = trimedStr;
-                            else
-                                if([elementName isEqualToString:FULLTEXT_TAG])
-                                    item.full_text = trimedStr;
-                                    else
-                                        if([elementName isEqualToString:DATE_TAG])
-                                            item.date = trimedStr;
-                                            else
-                                                if([elementName isEqualToString:DESCRIPTION_TAG])
-                                                    item.description = trimedStr;
-                                                    else
-                                                        if([elementName isEqualToString:ITUNESLINK_TAG])
-                                                            item.ituneslink = trimedStr;
-	
+                        //if([elementName isEqualToString:IMAGE_TAG]) 
+                            
 	[currentElementValue release];
 	currentElementValue = nil;
 

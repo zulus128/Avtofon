@@ -6,20 +6,30 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MarkWsDealers.h"
+#import "Mark.h"
 
-@implementation MarkWsDealers
+@implementation Mark
 
-@synthesize title, image, dealers;
+@synthesize title, image, dealers, models;
 
-- (id)init
-{
+- (id)init {
+    
     self = [super init];
     if (self) {
         // Initialization code here.
+        
+        dealers = [[NSMutableArray alloc] init];
+        models = [[NSMutableArray alloc] init];
     }
     
     return self;
 }
 
+- (void) dealloc {
+    
+	[dealers release];
+    [models release];
+    
+ 	[super dealloc];
+}
 @end

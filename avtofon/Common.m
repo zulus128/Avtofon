@@ -100,23 +100,23 @@
 	[super dealloc];
 }
 
-- (void)clearDealers {
+- (void)clearMarkWsDealers {
     
     [dealers removeAllObjects];
 }
 
-- (void)addDealer: (Item*)item {
+- (void)addMarkWsDealer: (Mark*)item {
    
     [dealers addObject:item];
     NSLog(@"Dealer added, title: %@", item.title);
 }
 
-- (int) getDealersCount {
+- (int) getMarkWsDealersCount {
 
     return [dealers count];
 }
 
-- (Item*) getDealerAt: (int)num {
+- (Mark*) getMarkWsDealerAt: (int)num {
     
     return [dealers objectAtIndex:num];
 }
@@ -129,6 +129,10 @@
 - (void) setOnlyWiFi: (BOOL)b {
 	
 	[[NSUserDefaults standardUserDefaults] setBool:b forKey:@"onlyWiFi"];
+    
+}
+
+- (void) saveDealersPreload {
     
 }
 

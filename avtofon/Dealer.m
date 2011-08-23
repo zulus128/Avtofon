@@ -10,8 +10,10 @@
 
 @implementation Dealer
 
-- (id)init
-{
+@synthesize title, address, code, promotion, recommend;
+
+- (id)init {
+    
     self = [super init];
     if (self) {
         // Initialization code here.

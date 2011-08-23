@@ -10,4 +10,10 @@
 
 @interface Dealer : NSObject
 
+@property (nonatomic, retain) NSString* title;
+@property (nonatomic, retain) NSString* address;
+@property (nonatomic, retain) NSString* code;
+@property (nonatomic, retain) NSString* promotion;
+@property (assign, readwrite) BOOL recommend;
+
 @end

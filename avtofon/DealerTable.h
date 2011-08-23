@@ -10,4 +10,8 @@
 
 @interface DealerTable : UITableViewController
 
+- (void)refresh: (BOOL)hand;
+- (void)addPreloadedDealers;
+- (BOOL)addDealers: (NSString*) url;
+
 @end

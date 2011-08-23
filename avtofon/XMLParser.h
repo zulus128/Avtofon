@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Item.h"
+#import "Mark.h"
+#import "Dealer.h"
 
 @interface XMLParser : NSObject <NSXMLParserDelegate> {
 
@@ -17,6 +18,7 @@
 
 - (XMLParser *) initXMLParser: (int) type;
 
-@property (nonatomic, retain) Item* item;
+@property (nonatomic, retain) Mark* item;
+@property (nonatomic, retain) Dealer* dealer;
 
 @end
