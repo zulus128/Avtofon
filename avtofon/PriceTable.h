@@ -10,4 +10,8 @@
 
 @interface PriceTable : UITableViewController
 
+- (void)refresh: (BOOL)hand;
+- (void)addPreloadedPrices;
+- (BOOL)addPrices: (NSString*) url;
+
 @end

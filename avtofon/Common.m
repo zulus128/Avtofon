@@ -121,6 +121,27 @@
     return [dealers objectAtIndex:num];
 }
 
+- (void)clearMarkWsPrices {
+    
+    [prices removeAllObjects];
+}
+
+- (void)addMarkWsPrice: (Mark*)item {
+    
+    [prices addObject:item];
+    NSLog(@"Price added, title: %@", item.title);
+}
+
+- (int) getMarkWsPricesCount {
+    
+    return [prices count];
+}
+
+- (Mark*) getMarkWsPriceAt: (int)num {
+    
+    return [prices objectAtIndex:num];
+}
+
 - (BOOL) isOnlyWiFi {
     
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"onlyWiFi"];
@@ -133,6 +154,10 @@
 }
 
 - (void) saveDealersPreload {
+    
+}
+
+- (void) savePricesPreload {
     
 }
 

@@ -101,14 +101,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     Dealer* dil = [self.mark.dealers objectAtIndex:indexPath.row];
     cell.textLabel.text = dil.title;
     cell.detailTextLabel.text = dil.address;
     
-    NSLog(@"title = %@", dil.title);
+    //NSLog(@"title = %@", dil.title);
     
     return cell;
 }
@@ -163,6 +163,25 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
+     */
+    NSLog(@"Call...");
+    Dealer* dil = [self.mark.dealers objectAtIndex:indexPath.row];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:87273216555,71"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:88001001808,%@",dil.code]]];
+    /*
+    UIWebView *myWebView=[[UIWebView alloc]initWithFrame:CGRectMake(20,20,200,300)];
+    myWebView.backgroundColor = [UIColor whiteColor];
+    myWebView.scalesPageToFit = YES;
+    myWebView.autoresizingMask = (UIViewAutoresizingFlexibleWidth |UIViewAutoresizingFlexibleHeight);
+    myWebView.delegate = self;
+    
+    NSString* telnumber = @"tel:+77273216555";
+    NSString* extension = @"71";
+    NSString *requestString; 
+    if( extension == (id)[NSNull null] || extension.length == 0 )
+        requestString = [NSString stringWithFormat:@"tel:%@",[telnumber stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+    else requestString = [NSString stringWithFormat:@"tel:%@,,%@",[telnumber stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],extension];       
+    [myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:requestString]]];
      */
 }
 

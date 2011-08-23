@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CAD2AAB1403C69100433B54 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2AAA1403C69000433B54 /* Model.m */; };
+		8CAD2AAF1403C6F300433B54 /* Complectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2AAE1403C6F200433B54 /* Complectation.m */; };
 		8CC11A3B1403571D0043CEB4 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC11A3A1403571D0043CEB4 /* libxml2.2.7.3.dylib */; };
 		8CC11A3E140357260043CEB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC11A3D140357260043CEB4 /* SystemConfiguration.framework */; };
 		8CC11A6A14035E510043CEB4 /* MarkDealers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC11A6814035E500043CEB4 /* MarkDealers.m */; };
@@ -32,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CAD2AA91403C69000433B54 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		8CAD2AAA1403C69000433B54 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		8CAD2AAD1403C6F200433B54 /* Complectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complectation.h; sourceTree = "<group>"; };
+		8CAD2AAE1403C6F200433B54 /* Complectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complectation.m; sourceTree = "<group>"; };
 		8CC11A3A1403571D0043CEB4 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
 		8CC11A3D140357260043CEB4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8CC11A6714035E4F0043CEB4 /* MarkDealers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkDealers.h; sourceTree = "<group>"; };
@@ -154,6 +160,10 @@
 				DD22633F1401D93F00CA6E6C /* Mark.m */,
 				DDD2EEE3140332E50077B459 /* Dealer.h */,
 				DDD2EEE4140332E50077B459 /* Dealer.m */,
+				8CAD2AA91403C69000433B54 /* Model.h */,
+				8CAD2AAA1403C69000433B54 /* Model.m */,
+				8CAD2AAD1403C6F200433B54 /* Complectation.h */,
+				8CAD2AAE1403C6F200433B54 /* Complectation.m */,
 				DDD2EEDF140328870077B459 /* Reachability.h */,
 				DDD2EEE0140328870077B459 /* Reachability.m */,
 				DD4AA87A1400077A006141A1 /* Supporting Files */,
@@ -246,6 +256,8 @@
 				DDD2EEE1140328870077B459 /* Reachability.m in Sources */,
 				DDD2EEE5140332E50077B459 /* Dealer.m in Sources */,
 				8CC11A6A14035E510043CEB4 /* MarkDealers.m in Sources */,
+				8CAD2AAB1403C69100433B54 /* Model.m in Sources */,
+				8CAD2AAF1403C6F300433B54 /* Complectation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

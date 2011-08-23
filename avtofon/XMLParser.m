@@ -9,9 +9,18 @@
 #import "XMLParser.h"
 #import "Common.h"
 
+enum type {
+
+    EN_MARK,
+    EN_DEALER,
+    EN_MODEL,
+    EN_COMLECTATION
+    
+};
+
 @implementation XMLParser
 
-@synthesize item, dealer;
+@synthesize item, dealer, model, complectation;
 
 - (XMLParser *) initXMLParser: (int) type {
 	
@@ -32,7 +41,8 @@
 
 		item = [[Mark alloc] init];
         //item.type = itype;
-        isDealer = NO;
+        //isDealer = NO;
+        currtype = EN_MARK;
         
         NSLog(@"Item alloc type = %i", itype);
 	}
@@ -40,7 +50,20 @@
     if([elementName isEqualToString:DEALER_TAG]) {
         
 		dealer = [[Dealer alloc] init];
-        isDealer = YES;
+        //isDealer = YES;
+        currtype = EN_DEALER;
+	}	
+
+    if([elementName isEqualToString:MODEL_TAG]) {
+        
+		model = [[Model alloc] init];
+        currtype = EN_MODEL;
+	}	
+
+    if([elementName isEqualToString:COMPLECT_TAG]) {
+        
+		complectation = [[Complectation alloc] init];
+        currtype = EN_COMLECTATION;
 	}	
 
 //   if ([elementName isEqualToString:IMAGE_TAG])
@@ -72,7 +95,7 @@
                 [[Common instance] addMarkWsDealer:item];                
                 break;
             case TYPE_COMPLECTATION:
-                //[[Common instance] addQA:item];                
+                [[Common instance] addMarkWsPrice:item];                
                 break;
             default:
                 break;
@@ -84,15 +107,25 @@
             
             [item.dealers addObject:dealer];
             [dealer release];
-            isDealer = NO;
         }	        
         else
             if([elementName isEqualToString:TITLE_TAG]) {
             
-                if(isDealer)
-                    dealer.title = trimedStr;
-                else
-                    item.title = trimedStr;
+                switch(currtype) {
+                        
+                    case EN_MARK:
+                        item.title = trimedStr;
+                        break;
+                    case EN_DEALER:
+                        dealer.title = trimedStr;
+                        break;
+                    case EN_MODEL:
+                        model.title = trimedStr;
+                        break;
+                    case EN_COMLECTATION:
+                        complectation.title = trimedStr;
+                        break;
+                }
             }
             else
                 if([elementName isEqualToString:IMAGE_TAG]) 

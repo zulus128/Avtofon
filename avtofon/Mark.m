@@ -18,8 +18,8 @@
     if (self) {
         // Initialization code here.
         
-        dealers = [[NSMutableArray alloc] init];
-        models = [[NSMutableArray alloc] init];
+        self.dealers = [[NSMutableArray alloc] init];
+        self.models = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -27,9 +27,12 @@
 
 - (void) dealloc {
     
-	[dealers release];
-    [models release];
+//	[dealers release];
+//    [models release];
+    self.dealers = nil;
+    self.models = nil;
     
  	[super dealloc];
 }
+
 @end

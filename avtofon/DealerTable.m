@@ -268,8 +268,8 @@
             return NO;
         }
     }
-    NSString *myStr = [[NSString alloc] initWithData:responseData encoding:NSWindowsCP1251StringEncoding];
-    myStr = [myStr stringByReplacingOccurrencesOfString:@"encoding=\"windows-1251\"" withString:@""];
+    NSString *myStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];// NSWindowsCP1251StringEncoding];
+    //myStr = [myStr stringByReplacingOccurrencesOfString:@"encoding=\"windows-1251\"" withString:@""];
     NSData* aData = [myStr dataUsingEncoding:NSUTF8StringEncoding];
     NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:aData];
     XMLParser* parser = [[XMLParser alloc] initXMLParser:TYPE_DEALER];

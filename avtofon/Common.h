@@ -15,10 +15,20 @@
 #define CODE_TAG @"cod"
 #define PROMOTION_TAG @"promotion"
 #define RECOMMEND_TAG @"recommend"
-
+#define MODEL_TAG @"model"
+#define COMPLECT_TAG @"complect"
+#define YEAR_TAG @"year"
+#define VOLUME_TAG @"volume"
+#define POWER_TAG @"power"
+#define FUEL_TAG @"fuel"
+#define TRANSMISSION_TAG @"transmision"
+#define GEARBOX_TAG @"gearbox"
+#define PRICE_TAG @"price"
+#define PRICESPEC_TAG @"pricespec"
 
 #define MENU_URL_FOR_REACH @"www.avtofon.com"
 #define XMLDEALERS_URL @"http://avtofon.com/sheet/xmldealer"
+#define XMLPRICES_URL @"http://avtofon.com/sheet/xmlprice"
 
 enum item_types {
     
@@ -50,9 +60,15 @@ enum item_types {
 - (int) getMarkWsDealersCount;
 - (Mark*) getMarkWsDealerAt: (int)num;
 
+- (void)clearMarkWsPrices;
+- (void)addMarkWsPrice: (Mark*)item;
+- (int) getMarkWsPricesCount;
+- (Mark*) getMarkWsPriceAt: (int)num;
+
 - (BOOL) isOnlyWiFi;
 - (void) setOnlyWiFi: (BOOL)b;
 
 - (void) saveDealersPreload;
+- (void) savePricesPreload;
 
 @end
