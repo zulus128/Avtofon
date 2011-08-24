@@ -29,6 +29,8 @@
 		DD4AA8801400077A006141A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA87F1400077A006141A1 /* main.m */; };
 		DD4AA8841400077A006141A1 /* avtofonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */; };
 		DD4AA8871400077B006141A1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA8851400077B006141A1 /* MainWindow.xib */; };
+		DD7C957714048B9900CFE4CD /* MarkModels.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7C957514048B9900CFE4CD /* MarkModels.m */; };
+		DD7C957814048B9900CFE4CD /* MarkModels.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C957614048B9900CFE4CD /* MarkModels.xib */; };
 		DDD2EEE1140328870077B459 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2EEE0140328870077B459 /* Reachability.m */; };
 		DDD2EEE5140332E50077B459 /* Dealer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2EEE4140332E50077B459 /* Dealer.m */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,9 @@
 		DD4AA8821400077A006141A1 /* avtofonAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avtofonAppDelegate.h; sourceTree = "<group>"; };
 		DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avtofonAppDelegate.m; sourceTree = "<group>"; };
 		DD4AA8861400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		DD7C957414048B9900CFE4CD /* MarkModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkModels.h; sourceTree = "<group>"; };
+		DD7C957514048B9900CFE4CD /* MarkModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkModels.m; sourceTree = "<group>"; };
+		DD7C957614048B9900CFE4CD /* MarkModels.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkModels.xib; sourceTree = "<group>"; };
 		DDD2EEDF140328870077B459 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DDD2EEE0140328870077B459 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DDD2EEE3140332E50077B459 /* Dealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dealer.h; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 				DD2263261401CC7300CA6E6C /* DealerTable.xib */,
 				DD22632D1401CD7200CA6E6C /* PriceTable.xib */,
 				8CC11A6914035E510043CEB4 /* MarkDealers.xib */,
+				DD7C957614048B9900CFE4CD /* MarkModels.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -154,6 +160,8 @@
 				8CC11A6814035E500043CEB4 /* MarkDealers.m */,
 				DD22632B1401CD7200CA6E6C /* PriceTable.h */,
 				DD22632C1401CD7200CA6E6C /* PriceTable.m */,
+				DD7C957414048B9900CFE4CD /* MarkModels.h */,
+				DD7C957514048B9900CFE4CD /* MarkModels.m */,
 				DD2263301401CE4F00CA6E6C /* XMLParser.h */,
 				DD2263311401CE4F00CA6E6C /* XMLParser.m */,
 				DD22633E1401D93E00CA6E6C /* Mark.h */,
@@ -236,6 +244,7 @@
 				DD2263381401D40100CA6E6C /* dealers.plist in Resources */,
 				DD22633A1401D40D00CA6E6C /* prices.plist in Resources */,
 				8CC11A6B14035E510043CEB4 /* MarkDealers.xib in Resources */,
+				DD7C957814048B9900CFE4CD /* MarkModels.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 				8CC11A6A14035E510043CEB4 /* MarkDealers.m in Sources */,
 				8CAD2AAB1403C69100433B54 /* Model.m in Sources */,
 				8CAD2AAF1403C6F300433B54 /* Complectation.m in Sources */,
+				DD7C957714048B9900CFE4CD /* MarkModels.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
