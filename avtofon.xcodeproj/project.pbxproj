@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C21A9211404B8CE00F68F16 /* ModelComplectations.m */; };
+		8C21A9241404B8CF00F68F16 /* ModelComplectations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */; };
 		8CAD2AAB1403C69100433B54 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2AAA1403C69000433B54 /* Model.m */; };
 		8CAD2AAF1403C6F300433B54 /* Complectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2AAE1403C6F200433B54 /* Complectation.m */; };
 		8CC11A3B1403571D0043CEB4 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC11A3A1403571D0043CEB4 /* libxml2.2.7.3.dylib */; };
@@ -36,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C21A9201404B8CC00F68F16 /* ModelComplectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelComplectations.h; sourceTree = "<group>"; };
+		8C21A9211404B8CE00F68F16 /* ModelComplectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelComplectations.m; sourceTree = "<group>"; };
+		8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelComplectations.xib; sourceTree = "<group>"; };
 		8CAD2AA91403C69000433B54 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		8CAD2AAA1403C69000433B54 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		8CAD2AAD1403C6F200433B54 /* Complectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complectation.h; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 				DD22632D1401CD7200CA6E6C /* PriceTable.xib */,
 				8CC11A6914035E510043CEB4 /* MarkDealers.xib */,
 				DD7C957614048B9900CFE4CD /* MarkModels.xib */,
+				8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -162,6 +168,8 @@
 				DD22632C1401CD7200CA6E6C /* PriceTable.m */,
 				DD7C957414048B9900CFE4CD /* MarkModels.h */,
 				DD7C957514048B9900CFE4CD /* MarkModels.m */,
+				8C21A9201404B8CC00F68F16 /* ModelComplectations.h */,
+				8C21A9211404B8CE00F68F16 /* ModelComplectations.m */,
 				DD2263301401CE4F00CA6E6C /* XMLParser.h */,
 				DD2263311401CE4F00CA6E6C /* XMLParser.m */,
 				DD22633E1401D93E00CA6E6C /* Mark.h */,
@@ -245,6 +253,7 @@
 				DD22633A1401D40D00CA6E6C /* prices.plist in Resources */,
 				8CC11A6B14035E510043CEB4 /* MarkDealers.xib in Resources */,
 				DD7C957814048B9900CFE4CD /* MarkModels.xib in Resources */,
+				8C21A9241404B8CF00F68F16 /* ModelComplectations.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +277,7 @@
 				8CAD2AAB1403C69100433B54 /* Model.m in Sources */,
 				8CAD2AAF1403C6F300433B54 /* Complectation.m in Sources */,
 				DD7C957714048B9900CFE4CD /* MarkModels.m in Sources */,
+				8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

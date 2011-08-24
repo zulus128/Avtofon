@@ -11,6 +11,7 @@
 #import "Reachability.h"
 #import "XMLParser.h"
 #import "Mark.h"
+#import "MarkModels.h"
 
 @implementation PriceTable
 
@@ -149,16 +150,16 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    MarkModels *detailViewController = [[MarkModels alloc] initWithNibName:@"MarkModels" bundle:nil];
+    
+    Mark* mrk = [[Common instance]getMarkWsDealerAt:indexPath.row];
+    detailViewController.mark = mrk;
+    
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
 }
 
 - (void)refresh: (BOOL)hand {

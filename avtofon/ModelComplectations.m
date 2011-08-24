@@ -1,18 +1,17 @@
 //
-//  MarkModels.m
+//  ModelComplectations.m
 //  avtofon
 //
-//  Created by вадим on 8/24/11.
+//  Created by naceka on 24.08.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MarkModels.h"
-#import "Model.h"
 #import "ModelComplectations.h"
 
-@implementation MarkModels
 
-@synthesize mark = _mark;
+@implementation ModelComplectations
+
+@synthesize model = _model;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -25,7 +24,7 @@
 
 - (void)dealloc {
     
-    [_mark release];
+    [_model release];
     
     [super dealloc];
 }
@@ -93,7 +92,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return [self.mark.models count];
+    return [self.model.complectations count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -106,9 +105,6 @@
     }
     
     // Configure the cell...
-    
-    Model* md = [self.mark.models objectAtIndex:indexPath.row];
-    cell.textLabel.text = md.title;
     
     return cell;
 }
@@ -154,17 +150,16 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    ModelComplectations *detailViewController = [[ModelComplectations alloc] initWithNibName:@"ModelComplectations" bundle:nil];
-    
-    Model* md = [self.mark.models objectAtIndex:indexPath.row];
-    
-    detailViewController.model = md;
-    
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     [detailViewController release];
+     */
 }
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Mark.h"
 
 @interface MarkModels : UITableViewController
+
+@property (nonatomic, retain) Mark* mark;
 
 @end
