@@ -7,7 +7,7 @@
 //
 
 #import "ModelComplectations.h"
-
+#import "Complectation.h"
 
 @implementation ModelComplectations
 
@@ -48,6 +48,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.title = @"Комплектации";
 }
 
 - (void)viewDidUnload
@@ -92,6 +94,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
+    //NSLog(@"complectations count = %d",  [self.model.complectations count]);
     return [self.model.complectations count];
 }
 
@@ -105,7 +108,8 @@
     }
     
     // Configure the cell...
-    
+    Complectation* dil = [self.model.complectations objectAtIndex:indexPath.row];
+    cell.textLabel.text = dil.title;
     return cell;
 }
 
@@ -160,6 +164,11 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+    
+    NSLog(@"Call...");
+    Complectation* dil = [self.model.complectations objectAtIndex:indexPath.row];
+    //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:87273216555,71"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:88001001808,%@",dil.code]]];
 }
 
 @end

@@ -15,6 +15,8 @@
 		8CC11A3E140357260043CEB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC11A3D140357260043CEB4 /* SystemConfiguration.framework */; };
 		8CC11A6A14035E510043CEB4 /* MarkDealers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC11A6814035E500043CEB4 /* MarkDealers.m */; };
 		8CC11A6B14035E510043CEB4 /* MarkDealers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC11A6914035E510043CEB4 /* MarkDealers.xib */; };
+		DD03F89F14057A650037CF54 /* ModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD03F89E14057A650037CF54 /* ModelCell.m */; };
+		DD03F8A214057B080037CF54 /* ModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD03F8A114057B080037CF54 /* ModelCell.xib */; };
 		DD2263271401CC7300CA6E6C /* DealerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2263251401CC7300CA6E6C /* DealerTable.m */; };
 		DD2263281401CC7300CA6E6C /* DealerTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2263261401CC7300CA6E6C /* DealerTable.xib */; };
 		DD22632E1401CD7200CA6E6C /* PriceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DD22632C1401CD7200CA6E6C /* PriceTable.m */; };
@@ -50,6 +52,9 @@
 		8CC11A6714035E4F0043CEB4 /* MarkDealers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkDealers.h; sourceTree = "<group>"; };
 		8CC11A6814035E500043CEB4 /* MarkDealers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkDealers.m; sourceTree = "<group>"; };
 		8CC11A6914035E510043CEB4 /* MarkDealers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkDealers.xib; sourceTree = "<group>"; };
+		DD03F89D14057A650037CF54 /* ModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCell.h; sourceTree = "<group>"; };
+		DD03F89E14057A650037CF54 /* ModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCell.m; sourceTree = "<group>"; };
+		DD03F8A114057B080037CF54 /* ModelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelCell.xib; sourceTree = "<group>"; };
 		DD2263241401CC7300CA6E6C /* DealerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealerTable.h; sourceTree = "<group>"; };
 		DD2263251401CC7300CA6E6C /* DealerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealerTable.m; sourceTree = "<group>"; };
 		DD2263261401CC7300CA6E6C /* DealerTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DealerTable.xib; sourceTree = "<group>"; };
@@ -109,6 +114,7 @@
 				8CC11A6914035E510043CEB4 /* MarkDealers.xib */,
 				DD7C957614048B9900CFE4CD /* MarkModels.xib */,
 				8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */,
+				DD03F8A114057B080037CF54 /* ModelCell.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 				DD7C957514048B9900CFE4CD /* MarkModels.m */,
 				8C21A9201404B8CC00F68F16 /* ModelComplectations.h */,
 				8C21A9211404B8CE00F68F16 /* ModelComplectations.m */,
+				DD03F89D14057A650037CF54 /* ModelCell.h */,
+				DD03F89E14057A650037CF54 /* ModelCell.m */,
 				DD2263301401CE4F00CA6E6C /* XMLParser.h */,
 				DD2263311401CE4F00CA6E6C /* XMLParser.m */,
 				DD22633E1401D93E00CA6E6C /* Mark.h */,
@@ -254,6 +262,7 @@
 				8CC11A6B14035E510043CEB4 /* MarkDealers.xib in Resources */,
 				DD7C957814048B9900CFE4CD /* MarkModels.xib in Resources */,
 				8C21A9241404B8CF00F68F16 /* ModelComplectations.xib in Resources */,
+				DD03F8A214057B080037CF54 /* ModelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +287,7 @@
 				8CAD2AAF1403C6F300433B54 /* Complectation.m in Sources */,
 				DD7C957714048B9900CFE4CD /* MarkModels.m in Sources */,
 				8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */,
+				DD03F89F14057A650037CF54 /* ModelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

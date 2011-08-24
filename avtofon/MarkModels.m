@@ -9,6 +9,7 @@
 #import "MarkModels.h"
 #import "Model.h"
 #import "ModelComplectations.h"
+#import "ModelCell.h"
 
 @implementation MarkModels
 
@@ -49,6 +50,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.title = @"Модели";
 }
 
 - (void)viewDidUnload
@@ -86,6 +89,11 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 88;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     return 1;
@@ -93,14 +101,36 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    NSLog(@"models count = %d",  [self.mark.models count]);
+ //   NSLog(@"models count = %d",  [self.mark.models count]);
     return [self.mark.models count];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    
+    static NSString *CellIdentifier = @"ModelCell";
+
+        ModelCell *cell = (ModelCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            // NSLog(@"NewsCell is nil");
+            NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ModelCell" owner:nil options:nil];
+            for (id currentObject in topLevelObjects) {
+                
+                if ([currentObject isKindOfClass:[ModelCell class]]) {
+                    
+                    cell = (ModelCell*) currentObject;
+                    break;
+                }
+            }
+        }
+
+    Model* md = [self.mark.models objectAtIndex:indexPath.row];
+    ((ModelCell*)cell).title.text = md.title;
+    
+    ((ModelCell*)cell).imageview.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: md.image]]];
+    
+  /*  static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -111,6 +141,7 @@
     
     Model* md = [self.mark.models objectAtIndex:indexPath.row];
     cell.textLabel.text = md.title;
+    */
     
     return cell;
 }

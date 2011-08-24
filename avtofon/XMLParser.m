@@ -114,6 +114,7 @@ enum type {
             if([elementName isEqualToString:COMPLECT_TAG]) {
                 
                 [model.complectations addObject:complectation];
+                 NSLog(@"addComplectation");
                 [complectation release];
             }	        
             else
