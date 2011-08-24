@@ -58,6 +58,8 @@ enum type {
         
 		model = [[Model alloc] init];
         currtype = EN_MODEL;
+        
+           NSLog(@"Model alloc");
 	}	
 
     if([elementName isEqualToString:COMPLECT_TAG]) {
@@ -118,6 +120,7 @@ enum type {
                 if([elementName isEqualToString:MODEL_TAG]) {
                     
                     [item.models addObject:model];
+                    NSLog(@"addModel");
                     [model release];
                 }	        
                 else

@@ -103,6 +103,7 @@
 		DD22632A1401CD3800CA6E6C /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				DD4AA8851400077B006141A1 /* MainWindow.xib */,
 				DD2263261401CC7300CA6E6C /* DealerTable.xib */,
 				DD22632D1401CD7200CA6E6C /* PriceTable.xib */,
 				8CC11A6914035E510043CEB4 /* MarkDealers.xib */,
@@ -159,7 +160,6 @@
 				DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */,
 				DD22633B1401D43600CA6E6C /* Common.h */,
 				DD22633C1401D43700CA6E6C /* Common.m */,
-				DD4AA8851400077B006141A1 /* MainWindow.xib */,
 				DD2263241401CC7300CA6E6C /* DealerTable.h */,
 				DD2263251401CC7300CA6E6C /* DealerTable.m */,
 				8CC11A6714035E4F0043CEB4 /* MarkDealers.h */,

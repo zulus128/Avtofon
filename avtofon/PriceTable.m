@@ -154,7 +154,8 @@
 
     MarkModels *detailViewController = [[MarkModels alloc] initWithNibName:@"MarkModels" bundle:nil];
     
-    Mark* mrk = [[Common instance]getMarkWsDealerAt:indexPath.row];
+    Mark* mrk = [[Common instance]getMarkWsPriceAt:indexPath.row];
+    
     detailViewController.mark = mrk;
     
     // Pass the selected object to the new view controller.
