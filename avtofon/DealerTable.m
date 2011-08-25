@@ -15,14 +15,16 @@
 
 @implementation DealerTable
 
-- (id)initWithStyle:(UITableViewStyle)style
+@synthesize dataSource;
+
+/*- (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
     return self;
-}
+}*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,6 +54,22 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)loadView {
+    
+    [super loadView];
+    sBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0,0,320,30)];
+    sBar.delegate = self;
+    [self.view addSubview:sBar];
+    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 31, 320, 406)];
+    myTableView.delegate = self;
+    myTableView.dataSource = self;
+    [self.view addSubview:myTableView];
+    //initialize the two arrays; dataSource will be initialized and populated by appDelegate
+    searchedData = [[NSMutableArray alloc]init];
+    tableData = [[NSMutableArray alloc]init];
+    [tableData addObjectsFromArray:dataSource];//on launch it should display all the records 
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -195,7 +213,8 @@
         self.topcell.image.image = [Common loadImage];
         [Common instance].img = self.topcell.image.image;
   */      
-        [self.tableView reloadData];
+//        [self.tableView reloadData];
+        [myTableView reloadData];
 		
 	}else {
         
@@ -210,13 +229,17 @@
             self.topcell.image.image = [Common loadImage];
             [Common instance].img = self.topcell.image.image;
             */
-            [self.tableView reloadData];
+//            [self.tableView reloadData];
+            [myTableView reloadData];
+
             hand = NO;
             
         }
         else {
             
-            [self.tableView reloadData];
+//            [self.tableView reloadData];
+            [myTableView reloadData];
+
             [[Common instance] saveDealersPreload];
                 
             if([[Common instance] getMarkWsDealersCount]) {
