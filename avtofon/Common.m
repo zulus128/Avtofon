@@ -50,6 +50,8 @@
 	self = [super init];
 	if(self !=nil) {
 
+        self.aTabBarBackground = [[UIImageView alloc]initWithImage:[UIImage imageNamed: @"greenbox.png"]];
+        
         dealers = [[NSMutableArray alloc] init];
         prices = [[NSMutableArray alloc] init];
         

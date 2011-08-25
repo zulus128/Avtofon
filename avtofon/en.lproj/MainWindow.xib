@@ -103,7 +103,7 @@
 						<object class="IBUIViewController" id="327693123">
 							<string key="IBUITitle">Dealers</string>
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="999446683">
-								<string key="IBUITitle">Дилеры</string>
+								<string key="IBUITitle">Avtofon</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<reference key="IBUIParentViewController" ref="297477770"/>

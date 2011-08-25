@@ -59,9 +59,12 @@
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
+    
     [super viewDidAppear:animated];
+    
+    UIImage *image = [UIImage imageNamed: @"greenbox.png"];
+    [self.navigationController.navigationBar setBackgroundImage:image];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

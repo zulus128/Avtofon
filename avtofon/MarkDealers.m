@@ -8,6 +8,7 @@
 
 #import "MarkDealers.h"
 #import "Dealer.h"
+#import "Common.h"
 
 @implementation MarkDealers
 
@@ -48,6 +49,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.navigationController.navigationBar setBackgroundImage:NULL];
 }
 
 - (void)viewDidUnload

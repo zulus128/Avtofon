@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C21A9211404B8CE00F68F16 /* ModelComplectations.m */; };
 		8C21A9241404B8CF00F68F16 /* ModelComplectations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */; };
+		8CA63CE314060B19007DCF87 /* greenbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA63CE114060B19007DCF87 /* greenbox.png */; };
+		8CA63CE414060B19007DCF87 /* greenbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA63CE214060B19007DCF87 /* greenbox@2x.png */; };
 		8CAD2AAB1403C69100433B54 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2AAA1403C69000433B54 /* Model.m */; };
 		8CAD2AAF1403C6F300433B54 /* Complectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2AAE1403C6F200433B54 /* Complectation.m */; };
 		8CC11A3B1403571D0043CEB4 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC11A3A1403571D0043CEB4 /* libxml2.2.7.3.dylib */; };
@@ -43,6 +45,8 @@
 		8C21A9201404B8CC00F68F16 /* ModelComplectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelComplectations.h; sourceTree = "<group>"; };
 		8C21A9211404B8CE00F68F16 /* ModelComplectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelComplectations.m; sourceTree = "<group>"; };
 		8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelComplectations.xib; sourceTree = "<group>"; };
+		8CA63CE114060B19007DCF87 /* greenbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbox.png; sourceTree = "<group>"; };
+		8CA63CE214060B19007DCF87 /* greenbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenbox@2x.png"; sourceTree = "<group>"; };
 		8CAD2AA91403C69000433B54 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		8CAD2AAA1403C69000433B54 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		8CAD2AAD1403C6F200433B54 /* Complectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complectation.h; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CA63CDF14060B03007DCF87 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8CA63CE114060B19007DCF87 /* greenbox.png */,
+				8CA63CE214060B19007DCF87 /* greenbox@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		DD22632A1401CD3800CA6E6C /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 		DD4AA8791400077A006141A1 /* avtofon */ = {
 			isa = PBXGroup;
 			children = (
+				8CA63CDF14060B03007DCF87 /* Images */,
 				DD2263361401D3D300CA6E6C /* Plists */,
 				DD22632A1401CD3800CA6E6C /* Xibs */,
 				DD4AA8821400077A006141A1 /* avtofonAppDelegate.h */,
@@ -263,6 +277,8 @@
 				DD7C957814048B9900CFE4CD /* MarkModels.xib in Resources */,
 				8C21A9241404B8CF00F68F16 /* ModelComplectations.xib in Resources */,
 				DD03F8A214057B080037CF54 /* ModelCell.xib in Resources */,
+				8CA63CE314060B19007DCF87 /* greenbox.png in Resources */,
+				8CA63CE414060B19007DCF87 /* greenbox@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
