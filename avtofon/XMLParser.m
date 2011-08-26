@@ -59,7 +59,7 @@ enum type {
 		model = [[Model alloc] init];
         currtype = EN_MODEL;
         
-           NSLog(@"Model alloc");
+       //    NSLog(@"Model alloc");
 	}	
 
     if([elementName isEqualToString:COMPLECT_TAG]) {
@@ -99,6 +99,9 @@ enum type {
             case TYPE_COMPLECTATION:
                 [[Common instance] addMarkWsPrice:item];                
                 break;
+            case TYPE_CREAM:
+                [[Common instance] addMarkWsCream:item];                
+                break;
             default:
                 break;
         }
@@ -114,14 +117,14 @@ enum type {
             if([elementName isEqualToString:COMPLECT_TAG]) {
                 
                 [model.complectations addObject:complectation];
-                 NSLog(@"addComplectation");
+                // NSLog(@"addComplectation");
                 [complectation release];
             }	        
             else
                 if([elementName isEqualToString:MODEL_TAG]) {
                     
                     [item.models addObject:model];
-                    NSLog(@"addModel");
+                  //  NSLog(@"addModel");
                     [model release];
                 }	        
                 else

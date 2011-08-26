@@ -29,6 +29,7 @@
 
 @synthesize dealerFilePath = _dealerFilePath;
 @synthesize priceFilePath = _priceFilePath;
+@synthesize creamFilePath = _creamFilePath;
 @synthesize aTabBarBackground = _aTabBarBackground;
 
 + (Common*) instance  {
@@ -54,6 +55,7 @@
         
         dealers = [[NSMutableArray alloc] init];
         prices = [[NSMutableArray alloc] init];
+        creams = [[NSMutableArray alloc] init];
         
  		NSArray* sp = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 		NSString* docpath = [sp objectAtIndex: 0];
@@ -68,11 +70,9 @@
 			[fileManager copyItemAtPath:appFile toPath:self.dealerFilePath error:&error];
 			
 		}
-    
         dealer_file = [[NSMutableDictionary alloc] initWithContentsOfFile:self.dealerFilePath];
 
-        self.priceFilePath = [docpath stringByAppendingPathComponent:@"prices.plist"];
-		
+        self.priceFilePath = [docpath stringByAppendingPathComponent:@"prices.plist"];		
         fe = [[NSFileManager defaultManager] fileExistsAtPath:self.priceFilePath];
 		if(!fe) {
             
@@ -83,8 +83,20 @@
 			[fileManager copyItemAtPath:appFile toPath:self.priceFilePath error:&error];
 			
 		}
-        
         price_file = [[NSMutableDictionary alloc] initWithContentsOfFile:self.priceFilePath];
+
+        self.creamFilePath = [docpath stringByAppendingPathComponent:@"creams.plist"];		
+        fe = [[NSFileManager defaultManager] fileExistsAtPath:self.creamFilePath];
+		if(!fe) {
+            
+            NSLog(@"NO creams.plist FILE !!! Creating...");
+            NSString *appFile = [[NSBundle mainBundle] pathForResource:@"creams" ofType:@"plist"];
+			NSError *error;
+			NSFileManager *fileManager = [NSFileManager defaultManager];
+			[fileManager copyItemAtPath:appFile toPath:self.creamFilePath error:&error];
+			
+		}
+        cream_file = [[NSMutableDictionary alloc] initWithContentsOfFile:self.creamFilePath];
 
 	}
 	return self;	
@@ -94,9 +106,11 @@
     
 	[dealers release];
     [prices release];
+    [creams release];
     
     [_dealerFilePath release];
     [_priceFilePath release];
+    [_creamFilePath release];
     [_aTabBarBackground release];
     
 	[super dealloc];
@@ -144,6 +158,27 @@
     return [prices objectAtIndex:num];
 }
 
+- (void)clearMarkWsCreams {
+    
+    [creams removeAllObjects];
+}
+
+- (void)addMarkWsCream: (Mark*)item {
+    
+    [creams addObject:item];
+    NSLog(@"Cream added, title: %@", item.title);
+}
+
+- (int) getMarkWsCreamsCount {
+    
+    return [creams count];
+}
+
+- (Mark*) getMarkWsCreamAt: (int)num {
+    
+    return [creams objectAtIndex:num];
+}
+
 - (BOOL) isOnlyWiFi {
     
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"onlyWiFi"];
@@ -160,6 +195,10 @@
 }
 
 - (void) savePricesPreload {
+    
+}
+
+- (void) saveCreamsPreload {
     
 }
 

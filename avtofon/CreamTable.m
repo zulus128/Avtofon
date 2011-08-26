@@ -1,19 +1,20 @@
 //
-//  DealerTable.m
+//  CreamTable.m
 //  avtofon
 //
-//  Created by вадим on 8/22/11.
+//  Created by naceka on 26.08.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "DealerTable.h"
+#import "CreamTable.h"
 #import "Common.h"
 #import "Reachability.h"
 #import "XMLParser.h"
 #import "Mark.h"
-#import "MarkDealers.h"
+#import "MarkModels.h"
 
-@implementation DealerTable
+
+@implementation CreamTable
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,13 +35,13 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad {
-    
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -59,12 +60,9 @@
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
-    
-    UIImage *image = [UIImage imageNamed: @"greenbox.png"];
-    [self.navigationController.navigationBar setBackgroundImage:image];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -85,16 +83,14 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return [[Common instance] getMarkWsDealersCount];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [[Common instance] getMarkWsCreamsCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,71 +103,70 @@
     }
     
     // Configure the cell...
-    Mark* mark = [[Common instance]getMarkWsDealerAt:indexPath.row];
+    Mark* mark = [[Common instance]getMarkWsCreamAt:indexPath.row];
     cell.textLabel.text = mark.title;
     cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: mark.image]]];
-
+    
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }   
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }   
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    MarkDealers *detailViewController = [[MarkDealers alloc] initWithNibName:@"MarkDealers" bundle:nil];
-     
-    Mark* mrk = [[Common instance]getMarkWsDealerAt:indexPath.row];
+    
+    MarkModels *detailViewController = [[MarkModels alloc] initWithNibName:@"MarkModels" bundle:nil];
+    
+    Mark* mrk = [[Common instance]getMarkWsCreamAt:indexPath.row];
+    
     detailViewController.mark = mrk;
     
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
-     
 }
-
 
 - (void)refresh: (BOOL)hand {
     
-    NSLog(@"refresh dealers");
+    NSLog(@"refresh Creams");
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
@@ -187,29 +182,29 @@
 		[dialog show];
 		[dialog release];
         
-        [self addPreloadedDealers];
+        [self addPreloadedCreams];
         
-/*        Item* item = [[Common instance] getsAt:0];
-        self.topcell.title.text = item.title;
-        self.topcell.rubric.text = item.rubric;
-        self.topcell.image.image = [Common loadImage];
-        [Common instance].img = self.topcell.image.image;
-  */      
+        /*        Item* item = [[Common instance] getsAt:0];
+         self.topcell.title.text = item.title;
+         self.topcell.rubric.text = item.rubric;
+         self.topcell.image.image = [Common loadImage];
+         [Common instance].img = self.topcell.image.image;
+         */      
         [self.tableView reloadData];
 		
 	}else {
         
-        [[Common instance] clearMarkWsDealers];
-        if(![self addDealers:XMLDEALERS_URL]) {
+        [[Common instance] clearMarkWsCreams];
+        if(![self addCreams:XMLCREAMS_URL]) {
             
-            [self addPreloadedDealers];
+            [self addPreloadedCreams];
             
-           /* Item* item = [[Common instance] getNewsAt:0];
-            self.topcell.title.text = item.title;
-            self.topcell.rubric.text = item.rubric;
-            self.topcell.image.image = [Common loadImage];
-            [Common instance].img = self.topcell.image.image;
-            */
+            /* Item* item = [[Common instance] getNewsAt:0];
+             self.topcell.title.text = item.title;
+             self.topcell.rubric.text = item.rubric;
+             self.topcell.image.image = [Common loadImage];
+             [Common instance].img = self.topcell.image.image;
+             */
             [self.tableView reloadData];
             hand = NO;
             
@@ -217,39 +212,39 @@
         else {
             
             [self.tableView reloadData];
-            [[Common instance] saveDealersPreload];
+            [[Common instance] saveCreamsPreload];
+            
+            if([[Common instance] getMarkWsCreamsCount]) {
                 
-            if([[Common instance] getMarkWsDealersCount]) {
-                    
-              /*      
-                Item* item = [[Common instance] getNewsAt:0];
-                    self.topcell.title.text = item.title;
-                    self.topcell.rubric.text = item.rubric;
-                    self.topcell.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: item.image]]];
-                    [Common instance].img = self.topcell.image.image;
-                    
-                    [Common saveImage:self.topcell.image.image];
-               */
+                /*      
+                 Item* item = [[Common instance] getNewsAt:0];
+                 self.topcell.title.text = item.title;
+                 self.topcell.rubric.text = item.rubric;
+                 self.topcell.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: item.image]]];
+                 [Common instance].img = self.topcell.image.image;
+                 
+                 [Common saveImage:self.topcell.image.image];
+                 */
             }
         }
     }
-        
-            
+    
+    
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
 }
 
-- (void) addPreloadedDealers {
+- (void) addPreloadedCreams {
     
- //   [[Common instance] clearNews];
- //   [[Common instance] clearQAs];
- //   [[Common instance] clearPodcasts];
+    //   [[Common instance] clearNews];
+    //   [[Common instance] clearQAs];
+    //   [[Common instance] clearPodcasts];
     
- //   [[Common instance] loadPreloaded];
+    //   [[Common instance] loadPreloaded];
 }
 
 
-- (BOOL)addDealers: (NSString*) url {
+- (BOOL)addCreams: (NSString*) url {
     
     NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
     [request setURL:[NSURL URLWithString:url]];
@@ -275,7 +270,7 @@
     //myStr = [myStr stringByReplacingOccurrencesOfString:@"encoding=\"windows-1251\"" withString:@""];
     NSData* aData = [myStr dataUsingEncoding:NSUTF8StringEncoding];
     NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:aData];
-    XMLParser* parser = [[XMLParser alloc] initXMLParser:TYPE_DEALER];
+    XMLParser* parser = [[XMLParser alloc] initXMLParser:TYPE_CREAM];
     [xmlParser setDelegate:parser];    
     
     for (int i = 0; i < 5; i++) {

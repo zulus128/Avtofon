@@ -8,16 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DealerTable : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource> {
-
-    UITableView *myTableView;
-    NSMutableArray *dataSource; //will be storing all the data
-    NSMutableArray *tableData;//will be storing data that will be displayed in table
-    NSMutableArray *searchedData;//will be storing data matching with the search string
-    UISearchBar *sBar;//search bar
-}
-
-@property(nonatomic,retain)NSMutableArray *dataSource;
+@interface DealerTable : UITableViewController
 
 - (void)refresh: (BOOL)hand;
 - (void)addPreloadedDealers;

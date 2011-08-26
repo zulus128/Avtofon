@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C21A9211404B8CE00F68F16 /* ModelComplectations.m */; };
 		8C21A9241404B8CF00F68F16 /* ModelComplectations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */; };
+		8CA35F3F1407A1630072AC39 /* CreamTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA35F3D1407A1630072AC39 /* CreamTable.m */; };
+		8CA35F401407A1630072AC39 /* CreamTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA35F3E1407A1630072AC39 /* CreamTable.xib */; };
+		8CA35F431407A53D0072AC39 /* creams.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CA35F421407A53D0072AC39 /* creams.plist */; };
 		8CA63CE314060B19007DCF87 /* greenbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA63CE114060B19007DCF87 /* greenbox.png */; };
 		8CA63CE414060B19007DCF87 /* greenbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA63CE214060B19007DCF87 /* greenbox@2x.png */; };
 		8CAD2AAB1403C69100433B54 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2AAA1403C69000433B54 /* Model.m */; };
@@ -45,6 +48,10 @@
 		8C21A9201404B8CC00F68F16 /* ModelComplectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelComplectations.h; sourceTree = "<group>"; };
 		8C21A9211404B8CE00F68F16 /* ModelComplectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelComplectations.m; sourceTree = "<group>"; };
 		8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelComplectations.xib; sourceTree = "<group>"; };
+		8CA35F3C1407A1630072AC39 /* CreamTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreamTable.h; sourceTree = "<group>"; };
+		8CA35F3D1407A1630072AC39 /* CreamTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreamTable.m; sourceTree = "<group>"; };
+		8CA35F3E1407A1630072AC39 /* CreamTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreamTable.xib; sourceTree = "<group>"; };
+		8CA35F421407A53D0072AC39 /* creams.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = creams.plist; sourceTree = "<group>"; };
 		8CA63CE114060B19007DCF87 /* greenbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbox.png; sourceTree = "<group>"; };
 		8CA63CE214060B19007DCF87 /* greenbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenbox@2x.png"; sourceTree = "<group>"; };
 		8CAD2AA91403C69000433B54 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
@@ -122,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				DD4AA8851400077B006141A1 /* MainWindow.xib */,
+				8CA35F3E1407A1630072AC39 /* CreamTable.xib */,
 				DD2263261401CC7300CA6E6C /* DealerTable.xib */,
 				DD22632D1401CD7200CA6E6C /* PriceTable.xib */,
 				8CC11A6914035E510043CEB4 /* MarkDealers.xib */,
@@ -137,6 +145,7 @@
 			children = (
 				DD2263371401D40100CA6E6C /* dealers.plist */,
 				DD2263391401D40D00CA6E6C /* prices.plist */,
+				8CA35F421407A53D0072AC39 /* creams.plist */,
 			);
 			name = Plists;
 			sourceTree = "<group>";
@@ -182,6 +191,8 @@
 				DD22633C1401D43700CA6E6C /* Common.m */,
 				DD2263241401CC7300CA6E6C /* DealerTable.h */,
 				DD2263251401CC7300CA6E6C /* DealerTable.m */,
+				8CA35F3C1407A1630072AC39 /* CreamTable.h */,
+				8CA35F3D1407A1630072AC39 /* CreamTable.m */,
 				8CC11A6714035E4F0043CEB4 /* MarkDealers.h */,
 				8CC11A6814035E500043CEB4 /* MarkDealers.m */,
 				DD22632B1401CD7200CA6E6C /* PriceTable.h */,
@@ -279,6 +290,8 @@
 				DD03F8A214057B080037CF54 /* ModelCell.xib in Resources */,
 				8CA63CE314060B19007DCF87 /* greenbox.png in Resources */,
 				8CA63CE414060B19007DCF87 /* greenbox@2x.png in Resources */,
+				8CA35F401407A1630072AC39 /* CreamTable.xib in Resources */,
+				8CA35F431407A53D0072AC39 /* creams.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +317,7 @@
 				DD7C957714048B9900CFE4CD /* MarkModels.m in Sources */,
 				8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */,
 				DD03F89F14057A650037CF54 /* ModelCell.m in Sources */,
+				8CA35F3F1407A1630072AC39 /* CreamTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,11 +29,13 @@
 #define MENU_URL_FOR_REACH @"www.avtofon.com"
 #define XMLDEALERS_URL @"http://avtofon.com/sheet/xmldealer"
 #define XMLPRICES_URL @"http://avtofon.com/sheet/xmlprice"
+#define XMLCREAMS_URL @"http://avtofon.com/sheet/xmlcream"
 
 enum item_types {
     
     TYPE_DEALER,
-    TYPE_COMPLECTATION
+    TYPE_COMPLECTATION,
+    TYPE_CREAM
 };
 
 @interface UINavigationBar (UINavigationBarCategory)
@@ -44,13 +46,16 @@ enum item_types {
  
     NSMutableArray* dealers;
     NSMutableArray* prices;
+    NSMutableArray* creams;
     
     NSMutableDictionary* dealer_file;
     NSMutableDictionary* price_file;
+    NSMutableDictionary* cream_file;
 }
 
 @property (nonatomic, retain) NSString* dealerFilePath;
 @property (nonatomic, retain) NSString* priceFilePath;
+@property (nonatomic, retain) NSString* creamFilePath;
 @property (nonatomic, retain) UIImageView *aTabBarBackground;
 
 + (Common*)instance;
@@ -65,10 +70,16 @@ enum item_types {
 - (int) getMarkWsPricesCount;
 - (Mark*) getMarkWsPriceAt: (int)num;
 
+- (void)clearMarkWsCreams;
+- (void)addMarkWsCream: (Mark*)item;
+- (int) getMarkWsCreamsCount;
+- (Mark*) getMarkWsCreamAt: (int)num;
+
 - (BOOL) isOnlyWiFi;
 - (void) setOnlyWiFi: (BOOL)b;
 
 - (void) saveDealersPreload;
 - (void) savePricesPreload;
+- (void) saveCreamsPreload;
 
 @end
