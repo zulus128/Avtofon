@@ -38,6 +38,12 @@
 		DD4AA8801400077A006141A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA87F1400077A006141A1 /* main.m */; };
 		DD4AA8841400077A006141A1 /* avtofonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */; };
 		DD4AA8871400077B006141A1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4AA8851400077B006141A1 /* MainWindow.xib */; };
+		DD5BF7D0140CAB290082FE12 /* 64-zap.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5BF7CA140CAB290082FE12 /* 64-zap.png */; };
+		DD5BF7D1140CAB290082FE12 /* 64-zap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5BF7CB140CAB290082FE12 /* 64-zap@2x.png */; };
+		DD5BF7D2140CAB290082FE12 /* 139-flags.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5BF7CC140CAB290082FE12 /* 139-flags.png */; };
+		DD5BF7D3140CAB290082FE12 /* 139-flags@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5BF7CD140CAB290082FE12 /* 139-flags@2x.png */; };
+		DD5BF7D4140CAB290082FE12 /* 172-pricetag.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5BF7CE140CAB290082FE12 /* 172-pricetag.png */; };
+		DD5BF7D5140CAB290082FE12 /* 172-pricetag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5BF7CF140CAB290082FE12 /* 172-pricetag@2x.png */; };
 		DD7C957714048B9900CFE4CD /* MarkModels.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7C957514048B9900CFE4CD /* MarkModels.m */; };
 		DD7C957814048B9900CFE4CD /* MarkModels.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C957614048B9900CFE4CD /* MarkModels.xib */; };
 		DDD2EEE1140328870077B459 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2EEE0140328870077B459 /* Reachability.m */; };
@@ -91,6 +97,12 @@
 		DD4AA8821400077A006141A1 /* avtofonAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avtofonAppDelegate.h; sourceTree = "<group>"; };
 		DD4AA8831400077A006141A1 /* avtofonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avtofonAppDelegate.m; sourceTree = "<group>"; };
 		DD4AA8861400077B006141A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		DD5BF7CA140CAB290082FE12 /* 64-zap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "64-zap.png"; sourceTree = "<group>"; };
+		DD5BF7CB140CAB290082FE12 /* 64-zap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "64-zap@2x.png"; sourceTree = "<group>"; };
+		DD5BF7CC140CAB290082FE12 /* 139-flags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "139-flags.png"; sourceTree = "<group>"; };
+		DD5BF7CD140CAB290082FE12 /* 139-flags@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "139-flags@2x.png"; sourceTree = "<group>"; };
+		DD5BF7CE140CAB290082FE12 /* 172-pricetag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "172-pricetag.png"; sourceTree = "<group>"; };
+		DD5BF7CF140CAB290082FE12 /* 172-pricetag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "172-pricetag@2x.png"; sourceTree = "<group>"; };
 		DD7C957414048B9900CFE4CD /* MarkModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkModels.h; sourceTree = "<group>"; };
 		DD7C957514048B9900CFE4CD /* MarkModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkModels.m; sourceTree = "<group>"; };
 		DD7C957614048B9900CFE4CD /* MarkModels.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkModels.xib; sourceTree = "<group>"; };
@@ -121,6 +133,12 @@
 			children = (
 				8CA63CE114060B19007DCF87 /* greenbox.png */,
 				8CA63CE214060B19007DCF87 /* greenbox@2x.png */,
+				DD5BF7CA140CAB290082FE12 /* 64-zap.png */,
+				DD5BF7CB140CAB290082FE12 /* 64-zap@2x.png */,
+				DD5BF7CC140CAB290082FE12 /* 139-flags.png */,
+				DD5BF7CD140CAB290082FE12 /* 139-flags@2x.png */,
+				DD5BF7CE140CAB290082FE12 /* 172-pricetag.png */,
+				DD5BF7CF140CAB290082FE12 /* 172-pricetag@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -292,6 +310,12 @@
 				8CA63CE414060B19007DCF87 /* greenbox@2x.png in Resources */,
 				8CA35F401407A1630072AC39 /* CreamTable.xib in Resources */,
 				8CA35F431407A53D0072AC39 /* creams.plist in Resources */,
+				DD5BF7D0140CAB290082FE12 /* 64-zap.png in Resources */,
+				DD5BF7D1140CAB290082FE12 /* 64-zap@2x.png in Resources */,
+				DD5BF7D2140CAB290082FE12 /* 139-flags.png in Resources */,
+				DD5BF7D3140CAB290082FE12 /* 139-flags@2x.png in Resources */,
+				DD5BF7D4140CAB290082FE12 /* 172-pricetag.png in Resources */,
+				DD5BF7D5140CAB290082FE12 /* 172-pricetag@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
