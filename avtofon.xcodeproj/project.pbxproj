@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1A93FB1410E9B700C7D74E /* DealerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C1A93FA1410E9B700C7D74E /* DealerCell.xib */; };
+		8C1A93FF1410E9F700C7D74E /* DealerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A93FE1410E9F700C7D74E /* DealerCell.m */; };
 		8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C21A9211404B8CE00F68F16 /* ModelComplectations.m */; };
 		8C21A9241404B8CF00F68F16 /* ModelComplectations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */; };
 		8CA35F3F1407A1630072AC39 /* CreamTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA35F3D1407A1630072AC39 /* CreamTable.m */; };
@@ -51,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C1A93FA1410E9B700C7D74E /* DealerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DealerCell.xib; sourceTree = "<group>"; };
+		8C1A93FD1410E9F700C7D74E /* DealerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DealerCell.h; sourceTree = "<group>"; };
+		8C1A93FE1410E9F700C7D74E /* DealerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealerCell.m; sourceTree = "<group>"; };
 		8C21A9201404B8CC00F68F16 /* ModelComplectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelComplectations.h; sourceTree = "<group>"; };
 		8C21A9211404B8CE00F68F16 /* ModelComplectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelComplectations.m; sourceTree = "<group>"; };
 		8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelComplectations.xib; sourceTree = "<group>"; };
@@ -154,6 +159,7 @@
 				DD7C957614048B9900CFE4CD /* MarkModels.xib */,
 				8C21A9221404B8CF00F68F16 /* ModelComplectations.xib */,
 				DD03F8A114057B080037CF54 /* ModelCell.xib */,
+				8C1A93FA1410E9B700C7D74E /* DealerCell.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -219,6 +225,8 @@
 				DD7C957514048B9900CFE4CD /* MarkModels.m */,
 				8C21A9201404B8CC00F68F16 /* ModelComplectations.h */,
 				8C21A9211404B8CE00F68F16 /* ModelComplectations.m */,
+				8C1A93FD1410E9F700C7D74E /* DealerCell.h */,
+				8C1A93FE1410E9F700C7D74E /* DealerCell.m */,
 				DD03F89D14057A650037CF54 /* ModelCell.h */,
 				DD03F89E14057A650037CF54 /* ModelCell.m */,
 				DD2263301401CE4F00CA6E6C /* XMLParser.h */,
@@ -316,6 +324,7 @@
 				DD5BF7D3140CAB290082FE12 /* 139-flags@2x.png in Resources */,
 				DD5BF7D4140CAB290082FE12 /* 172-pricetag.png in Resources */,
 				DD5BF7D5140CAB290082FE12 /* 172-pricetag@2x.png in Resources */,
+				8C1A93FB1410E9B700C7D74E /* DealerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +351,7 @@
 				8C21A9231404B8CF00F68F16 /* ModelComplectations.m in Sources */,
 				DD03F89F14057A650037CF54 /* ModelCell.m in Sources */,
 				8CA35F3F1407A1630072AC39 /* CreamTable.m in Sources */,
+				8C1A93FF1410E9F700C7D74E /* DealerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

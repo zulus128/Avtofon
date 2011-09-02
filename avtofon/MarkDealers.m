@@ -9,6 +9,7 @@
 #import "MarkDealers.h"
 #import "Dealer.h"
 #import "Common.h"
+#import "DealerCell.h"
 
 @implementation MarkDealers
 
@@ -98,19 +99,41 @@
     return [self.mark.dealers count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 60;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+/*    static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
+  */  
+    static NSString *CellIdentifier = @"DealerCell";
     
+    DealerCell *cell = (DealerCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"DealerCell" owner:nil options:nil];
+        for (id currentObject in topLevelObjects) {
+            
+            if ([currentObject isKindOfClass:[DealerCell class]]) {
+                
+                cell = (DealerCell*) currentObject;
+                break;
+            }
+        }
+    }
+
     Dealer* dil = [self.mark.dealers objectAtIndex:indexPath.row];
-    cell.textLabel.text = dil.title;
-    cell.detailTextLabel.text = dil.address;
-    
+//    cell.textLabel.text = dil.title;
+//    cell.detailTextLabel.text = dil.address;
+    cell.title.text = dil.title;
+    cell.subtitle.text = dil.address;
+    cell.recomend.text = dil.recommend?@"КАСКО":@"";
     //NSLog(@"title = %@", dil.title);
     
     return cell;
