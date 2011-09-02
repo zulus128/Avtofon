@@ -13,6 +13,8 @@
     
 }
 
+-(void) dialNumber:(int)n;
+
 @property (nonatomic, retain) Mark* mark;
 
 @end

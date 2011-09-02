@@ -62,7 +62,7 @@ enum item_types {
 
 + (Common*)instance;
 
-- (void) saveImage: (UIImage*)img name:(NSString*)name;
+- (void) saveImage: (NSString*)path name:(NSString*)name;
 - (UIImage*) getImage: (NSString*)name;
 
 - (void)clearMarkWsDealers;

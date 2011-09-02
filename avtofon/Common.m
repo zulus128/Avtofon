@@ -47,10 +47,14 @@
 	return instance;
 }
 
-- (void) saveImage: (UIImage*)img name:(NSString*)name {
+- (void) saveImage: (NSString*)path name:(NSString*)name {
     
     NSLog(@"saveImage: %@",name);
     NSString *pngFilePath = [NSString stringWithFormat:@"%@/%@", self.docpath, name];
+    if ([[NSFileManager defaultManager]fileExistsAtPath:pngFilePath])
+        return;
+
+    UIImage* img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: path]]];
     NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(img)];
     [data1 writeToFile:pngFilePath atomically:YES];
     
@@ -63,7 +67,7 @@
     return [UIImage imageWithData:[NSData dataWithContentsOfFile:pngFilePath]];
 }
 
-- (id) init{	
+- (id) init {	
 	
 	self = [super init];
 	if(self !=nil) {
@@ -220,5 +224,6 @@
 - (void) saveCreamsPreload {
     
 }
+
 
 @end

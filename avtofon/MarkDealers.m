@@ -168,9 +168,10 @@
      [detailViewController release];
      */
     NSLog(@"Call...");
-    Dealer* dil = [self.mark.dealers objectAtIndex:indexPath.row];
+    [self dialNumber: indexPath.row];
+    //Dealer* dil = [self.mark.dealers objectAtIndex:indexPath.row];
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:87273216555,71"]];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:88001001808,%@",dil.code]]];
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:88001001808,%@",dil.code]]];
     /*
     UIWebView *myWebView=[[UIWebView alloc]initWithFrame:CGRectMake(20,20,200,300)];
     myWebView.backgroundColor = [UIColor whiteColor];
@@ -186,6 +187,35 @@
     else requestString = [NSString stringWithFormat:@"tel:%@,,%@",[telnumber stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],extension];       
     [myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:requestString]]];
      */
+}
+
+-(void) dialNumber:(int)n {
+    
+    Dealer* dil = [self.mark.dealers objectAtIndex:n];
+    NSString *aPhoneNo = [NSString stringWithFormat:@"tel://88001001808,%@",dil.code];
+
+    //NSString *aPhoneNo = [@"tel://" stringByAppendingString:[itsPhoneNoArray objectAtIndex:[sender tag]]];
+    
+    NSURL *url= [NSURL URLWithString:aPhoneNo];
+    
+    NSString *osVersion = [[UIDevice currentDevice] systemVersion];
+    
+    if ([osVersion floatValue] >= 3.1) { 
+        UIWebView *webview = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame]; 
+        [webview loadRequest:[NSURLRequest requestWithURL:url]]; 
+        webview.hidden = YES; 
+        // Assume we are in a view controller and have access to self.view 
+        
+        [self.view addSubview:webview]; 
+        [webview release]; 
+    
+    } else { 
+        
+        // On 3.0 and below, dial as usual 
+        [[UIApplication sharedApplication] openURL: url];
+    }
+    
+    
 }
 
 @end
