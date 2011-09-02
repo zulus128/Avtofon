@@ -31,6 +31,7 @@
 @synthesize priceFilePath = _priceFilePath;
 @synthesize creamFilePath = _creamFilePath;
 @synthesize aTabBarBackground = _aTabBarBackground;
+@synthesize docpath = _docpath;
 
 + (Common*) instance  {
 	
@@ -46,6 +47,22 @@
 	return instance;
 }
 
+- (void) saveImage: (UIImage*)img name:(NSString*)name {
+    
+    NSLog(@"saveImage: %@",name);
+    NSString *pngFilePath = [NSString stringWithFormat:@"%@/%@", self.docpath, name];
+    NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(img)];
+    [data1 writeToFile:pngFilePath atomically:YES];
+    
+}
+
+- (UIImage*) getImage: (NSString*)name {
+
+    NSLog(@"getImage: %@",name);
+    NSString *pngFilePath = [NSString stringWithFormat:@"%@/%@", self.docpath, name];
+    return [UIImage imageWithData:[NSData dataWithContentsOfFile:pngFilePath]];
+}
+
 - (id) init{	
 	
 	self = [super init];
@@ -58,8 +75,8 @@
         creams = [[NSMutableArray alloc] init];
         
  		NSArray* sp = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-		NSString* docpath = [sp objectAtIndex: 0];
-        self.dealerFilePath = [docpath stringByAppendingPathComponent:@"dealers.plist"];
+		self.docpath = [sp objectAtIndex: 0];
+        self.dealerFilePath = [self.docpath stringByAppendingPathComponent:@"dealers.plist"];
 		BOOL fe = [[NSFileManager defaultManager] fileExistsAtPath:self.dealerFilePath];
 		if(!fe) {
             
@@ -72,7 +89,7 @@
 		}
         dealer_file = [[NSMutableDictionary alloc] initWithContentsOfFile:self.dealerFilePath];
 
-        self.priceFilePath = [docpath stringByAppendingPathComponent:@"prices.plist"];		
+        self.priceFilePath = [self.docpath stringByAppendingPathComponent:@"prices.plist"];		
         fe = [[NSFileManager defaultManager] fileExistsAtPath:self.priceFilePath];
 		if(!fe) {
             
@@ -85,7 +102,7 @@
 		}
         price_file = [[NSMutableDictionary alloc] initWithContentsOfFile:self.priceFilePath];
 
-        self.creamFilePath = [docpath stringByAppendingPathComponent:@"creams.plist"];		
+        self.creamFilePath = [self.docpath stringByAppendingPathComponent:@"creams.plist"];		
         fe = [[NSFileManager defaultManager] fileExistsAtPath:self.creamFilePath];
 		if(!fe) {
             
@@ -112,6 +129,8 @@
     [_priceFilePath release];
     [_creamFilePath release];
     [_aTabBarBackground release];
+    
+    [_docpath release];
     
 	[super dealloc];
 }

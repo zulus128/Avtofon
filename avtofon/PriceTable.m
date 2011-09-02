@@ -104,8 +104,9 @@
     // Configure the cell...
     Mark* mark = [[Common instance]getMarkWsPriceAt:indexPath.row];
     cell.textLabel.text = mark.title;
-    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: mark.image]]];
-    
+    //cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: mark.image]]];
+    cell.imageView.image = [[Common instance] getImage:mark.image];
+
     return cell;
 }
 

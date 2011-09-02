@@ -150,13 +150,16 @@ enum type {
             else
                 if([elementName isEqualToString:IMAGE_TAG]) {
 
+                    UIImage* im = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: trimedStr]]];
+                    NSString* nm = [trimedStr lastPathComponent];
+                    [[Common instance] saveImage:im name:nm];
                     switch(currtype) {
                             
                         case EN_MARK:
-                            item.image = trimedStr;
+                            item.image = nm;
                             break;
                         case EN_MODEL:
-                            model.image = trimedStr;
+                            model.image = nm;
                             break;
                     }
                 }

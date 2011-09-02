@@ -51,14 +51,19 @@ enum item_types {
     NSMutableDictionary* dealer_file;
     NSMutableDictionary* price_file;
     NSMutableDictionary* cream_file;
+    
 }
 
 @property (nonatomic, retain) NSString* dealerFilePath;
 @property (nonatomic, retain) NSString* priceFilePath;
 @property (nonatomic, retain) NSString* creamFilePath;
 @property (nonatomic, retain) UIImageView *aTabBarBackground;
+@property (nonatomic, retain) NSString* docpath;
 
 + (Common*)instance;
+
+- (void) saveImage: (UIImage*)img name:(NSString*)name;
+- (UIImage*) getImage: (NSString*)name;
 
 - (void)clearMarkWsDealers;
 - (void)addMarkWsDealer: (Mark*)item;

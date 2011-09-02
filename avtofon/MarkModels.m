@@ -10,6 +10,7 @@
 #import "Model.h"
 #import "ModelComplectations.h"
 #import "ModelCell.h"
+#import "Common.h"
 
 @implementation MarkModels
 
@@ -128,7 +129,9 @@
     Model* md = [self.mark.models objectAtIndex:indexPath.row];
     ((ModelCell*)cell).title.text = md.title;
     
-    ((ModelCell*)cell).imageview.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: md.image]]];
+//    ((ModelCell*)cell).imageview.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: md.image]]];
+    cell.imageView.image = [[Common instance] getImage:md.image];
+
     
   /*  static NSString *CellIdentifier = @"Cell";
     
