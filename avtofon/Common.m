@@ -17,6 +17,7 @@
         return;
     }
 
+    [Common instance].aTabBarBackground = [[UIImageView alloc]initWithImage:image];
     [Common instance].aTabBarBackground.frame = CGRectMake(0,0,self.frame.size.width,self.frame.size.height);
     [self addSubview:[Common instance].aTabBarBackground];
     [self sendSubviewToBack:[Common instance].aTabBarBackground];
@@ -71,8 +72,6 @@
 	
 	self = [super init];
 	if(self !=nil) {
-
-        self.aTabBarBackground = [[UIImageView alloc]initWithImage:[UIImage imageNamed: @"greenbox.png"]];
         
         dealers = [[NSMutableArray alloc] init];
         prices = [[NSMutableArray alloc] init];

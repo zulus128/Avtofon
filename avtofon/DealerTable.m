@@ -63,7 +63,7 @@
     
     [super viewDidAppear:animated];
     
-    UIImage *image = [UIImage imageNamed: @"greenbox.png"];
+    UIImage *image = [UIImage imageNamed: @"avtofon-green.png"];
     [self.navigationController.navigationBar setBackgroundImage:image];
 }
 

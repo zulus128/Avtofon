@@ -22,6 +22,10 @@
 		8CC11A3E140357260043CEB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC11A3D140357260043CEB4 /* SystemConfiguration.framework */; };
 		8CC11A6A14035E510043CEB4 /* MarkDealers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC11A6814035E500043CEB4 /* MarkDealers.m */; };
 		8CC11A6B14035E510043CEB4 /* MarkDealers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC11A6914035E510043CEB4 /* MarkDealers.xib */; };
+		8CC476A914147DBE00DB626E /* avtofon-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC476A514147DBE00DB626E /* avtofon-green.png */; };
+		8CC476AA14147DBE00DB626E /* avtofon-green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC476A614147DBE00DB626E /* avtofon-green@2x.png */; };
+		8CC476AB14147DBE00DB626E /* avtofon-top.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC476A714147DBE00DB626E /* avtofon-top.png */; };
+		8CC476AC14147DBE00DB626E /* avtofon-top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC476A814147DBE00DB626E /* avtofon-top@2x.png */; };
 		DD03F89F14057A650037CF54 /* ModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD03F89E14057A650037CF54 /* ModelCell.m */; };
 		DD03F8A214057B080037CF54 /* ModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD03F8A114057B080037CF54 /* ModelCell.xib */; };
 		DD2263271401CC7300CA6E6C /* DealerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2263251401CC7300CA6E6C /* DealerTable.m */; };
@@ -54,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		8C1A93FA1410E9B700C7D74E /* DealerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DealerCell.xib; sourceTree = "<group>"; };
-		8C1A93FD1410E9F700C7D74E /* DealerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DealerCell.h; sourceTree = "<group>"; };
+		8C1A93FD1410E9F700C7D74E /* DealerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealerCell.h; sourceTree = "<group>"; };
 		8C1A93FE1410E9F700C7D74E /* DealerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealerCell.m; sourceTree = "<group>"; };
 		8C21A9201404B8CC00F68F16 /* ModelComplectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelComplectations.h; sourceTree = "<group>"; };
 		8C21A9211404B8CE00F68F16 /* ModelComplectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelComplectations.m; sourceTree = "<group>"; };
@@ -74,6 +78,10 @@
 		8CC11A6714035E4F0043CEB4 /* MarkDealers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkDealers.h; sourceTree = "<group>"; };
 		8CC11A6814035E500043CEB4 /* MarkDealers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkDealers.m; sourceTree = "<group>"; };
 		8CC11A6914035E510043CEB4 /* MarkDealers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkDealers.xib; sourceTree = "<group>"; };
+		8CC476A514147DBE00DB626E /* avtofon-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avtofon-green.png"; sourceTree = "<group>"; };
+		8CC476A614147DBE00DB626E /* avtofon-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avtofon-green@2x.png"; sourceTree = "<group>"; };
+		8CC476A714147DBE00DB626E /* avtofon-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avtofon-top.png"; sourceTree = "<group>"; };
+		8CC476A814147DBE00DB626E /* avtofon-top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avtofon-top@2x.png"; sourceTree = "<group>"; };
 		DD03F89D14057A650037CF54 /* ModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCell.h; sourceTree = "<group>"; };
 		DD03F89E14057A650037CF54 /* ModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCell.m; sourceTree = "<group>"; };
 		DD03F8A114057B080037CF54 /* ModelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelCell.xib; sourceTree = "<group>"; };
@@ -144,6 +152,10 @@
 				DD5BF7CD140CAB290082FE12 /* 139-flags@2x.png */,
 				DD5BF7CE140CAB290082FE12 /* 172-pricetag.png */,
 				DD5BF7CF140CAB290082FE12 /* 172-pricetag@2x.png */,
+				8CC476A514147DBE00DB626E /* avtofon-green.png */,
+				8CC476A614147DBE00DB626E /* avtofon-green@2x.png */,
+				8CC476A714147DBE00DB626E /* avtofon-top.png */,
+				8CC476A814147DBE00DB626E /* avtofon-top@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -325,6 +337,10 @@
 				DD5BF7D4140CAB290082FE12 /* 172-pricetag.png in Resources */,
 				DD5BF7D5140CAB290082FE12 /* 172-pricetag@2x.png in Resources */,
 				8C1A93FB1410E9B700C7D74E /* DealerCell.xib in Resources */,
+				8CC476A914147DBE00DB626E /* avtofon-green.png in Resources */,
+				8CC476AA14147DBE00DB626E /* avtofon-green@2x.png in Resources */,
+				8CC476AB14147DBE00DB626E /* avtofon-top.png in Resources */,
+				8CC476AC14147DBE00DB626E /* avtofon-top@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
